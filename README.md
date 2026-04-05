@@ -1,5 +1,5 @@
-Дарья Бучакова
-Design & Creative Director
+## Дарья Бучакова
+## Design & Creative Director
 
 ## Стек
 
