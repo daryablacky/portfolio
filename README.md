@@ -1,6 +1,5 @@
-# DBW Portfolio
-
-Одностраничный сайт-визитка.
+Дарья Бучакова
+Design & Creative Director
 
 ## Стек
 
