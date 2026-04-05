@@ -18,7 +18,7 @@ export const works: Work[] = [
     description: 'Арт-дирекшен. Flowwow, 2024',
     type: 'Брендинг',
     year: '2024',
-    imageSrc: '/images/works/flowwow-rebrand.jpg',
+    imageSrc: './images/works/flowwow-rebrand.jpg',
     imageAlt: 'Ребрендинг Flowwow',
   },
   // TODO: добавить остальные работы

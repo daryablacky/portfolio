@@ -29,28 +29,28 @@ const superpowersData: Superpower[] = [
     number: 1,
     title: 'Системное видение',
     description: 'Проектирую не отдельные артефакты, а\u00A0целостные дизайн-экосистемы, где бренд, продукт, коммуникации и\u00A0процессы работают как единая архитектура.',
-    imageSrc: '/assets/images/superpowers/icons_superpower_1_undefined.webp',
+    imageSrc: './assets/images/superpowers/icons_superpower_1_undefined.webp',
   },
   {
     id: '2',
     number: 2,
     title: 'Структурирование хаоса',
     description: 'Перевожу сложность в\u00A0понятные модели: создаю фреймворки, правила и\u00A0устойчивые процессы, которые масштабируются без\u00A0потери качества.',
-    imageSrc: '/assets/images/superpowers/icons_superpower_2_undefined.webp',
+    imageSrc: './assets/images/superpowers/icons_superpower_2_undefined.webp',
   },
   {
     id: '3',
     number: 3,
     title: 'Масштаб без потери смысла',
     description: 'Работаю с\u00A0крупными командами и\u00A0многослойными брендами, удерживая стратегическое ядро и\u00A0усиливая идентичность при\u00A0росте.',
-    imageSrc: '/assets/images/superpowers/icons_superpower_3_undefined.webp',
+    imageSrc: './assets/images/superpowers/icons_superpower_3_undefined.webp',
   },
   {
     id: '4',
     number: 4,
     title: 'Стратегическая устойчивость',
     description: 'Принимаю решения в\u00A0нагруженных контекстах, балансируя бизнес-цели, ресурсы и\u00A0визуальную культуру.',
-    imageSrc: '/assets/images/superpowers/icons_superpower_4_undefined.webp',
+    imageSrc: './assets/images/superpowers/icons_superpower_4_undefined.webp',
   },
 ]
 

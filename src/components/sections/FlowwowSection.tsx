@@ -110,7 +110,7 @@ export default function FlowwowSection() {
               >
                 {/* Medal (нижний слой) */}
                 <Image
-                  src="/assets/images/flowwow/medalcontentwrapper.avif"
+                  src="./assets/images/flowwow/medalcontentwrapper.avif"
                   alt=""
                   aria-hidden="true"
                   fill
@@ -120,7 +120,7 @@ export default function FlowwowSection() {
                 />
                 {/* Circles Pattern (верхний слой над медалью) */}
                 <Image
-                  src="/assets/images/flowwow/circlescontentwrapper.avif"
+                  src="./assets/images/flowwow/circlescontentwrapper.avif"
                   alt=""
                   aria-hidden="true"
                   fill
@@ -213,7 +213,7 @@ export default function FlowwowSection() {
                 objectFit: 'cover',
                 pointerEvents: 'none',
               }}
-              src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio.mp4"
+              src="./assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio.mp4"
             />
             {/* Оверлей 3% поверх видео */}
             <div

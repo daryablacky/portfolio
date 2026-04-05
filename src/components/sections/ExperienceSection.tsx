@@ -214,7 +214,7 @@ export default function ExperienceSection() {
           overflow: 'hidden',
           zIndex: 5,
         }}>
-          <Image src="/assets/images/experience/exp-image-01.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
+          <Image src="./assets/images/experience/exp-image-01.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
         </div>
 
         {/* exp-image-02 - 115x115, x=1305, y=0, rounded-30 */}
@@ -228,7 +228,7 @@ export default function ExperienceSection() {
           overflow: 'hidden',
           zIndex: 5,
         }}>
-          <Image src="/assets/images/experience/exp-image-02.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
+          <Image src="./assets/images/experience/exp-image-02.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
         </div>
 
         {/* exp-image-03 - 150x98, x=1073, y=262, rounded-1000 */}
@@ -242,7 +242,7 @@ export default function ExperienceSection() {
           overflow: 'hidden',
           zIndex: 5,
         }}>
-          <Image src="/assets/images/experience/exp-image-03.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
+          <Image src="./assets/images/experience/exp-image-03.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
         </div>
 
         {/* exp-image-04 - 150x98, x=148, y=471.72, rounded-30 */}
@@ -256,7 +256,7 @@ export default function ExperienceSection() {
           overflow: 'hidden',
           zIndex: 5,
         }}>
-          <Image src="/assets/images/experience/exp-image-04.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
+          <Image src="./assets/images/experience/exp-image-04.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
         </div>
         </div> {/* /experience-photos-mobile */}
       </div>

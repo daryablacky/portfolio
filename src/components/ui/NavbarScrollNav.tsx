@@ -208,7 +208,7 @@ const NavbarScrollNav = () => {
         }}
       >
         <Image
-          src="/assets/images/hero/compass-needle.svg"
+          src="./assets/images/hero/compass-needle.svg"
           alt=""
           aria-hidden="true"
           fill

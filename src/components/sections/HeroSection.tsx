@@ -95,7 +95,7 @@ export default function HeroSection() {
             {/* Ribbon SVG: 12×24px → 0.833vw × 1.667vw */}
             <div className="ribbon-mobile" style={{ width: '11px', height: '22px', position: 'relative', flexShrink: 0 }}>
               <Image
-                src="/assets/images/hero/ribbon.svg"
+                src="./assets/images/hero/ribbon.svg"
                 alt=""
                 aria-hidden="true"
                 fill
@@ -139,7 +139,7 @@ export default function HeroSection() {
           >
             {/* Stroke ellipse (статичный) */}
             <Image
-              src="/assets/images/hero/hero-repit-ellipse.svg"
+              src="./assets/images/hero/hero-repit-ellipse.svg"
               alt=""
               aria-hidden="true"
               fill
@@ -186,7 +186,7 @@ export default function HeroSection() {
                 }}
               >
                 <Image
-                  src="/assets/images/hero/avatar-photo.webp"
+                  src="./assets/images/hero/avatar-photo.webp"
                   alt=""
                   aria-hidden="true"
                   fill

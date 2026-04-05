@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Дарья Бучакова — Design & Creative Director (ex Flowwow)',
   description: 'Строю масштабируемые дизайн-системы и сильные команды, которые усиливают бренды и бизнес.',
   icons: {
-    icon: '/favicon/avatar-photo-32.png',
-    apple: '/favicon/avatar-photo-192.png',
+    icon: './favicon/avatar-photo-32.png',
+    apple: './favicon/avatar-photo-192.png',
   },
   openGraph: {
     title: 'Дарья Бучакова — Design & Creative Director (ex Flowwow)',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/opengraph/opengraph-1200x630.avif',
+        url: './opengraph/opengraph-1200x630.avif',
         width: 1200,
         height: 630,
         alt: 'Дарья Бучакова — Design & Creative Director',

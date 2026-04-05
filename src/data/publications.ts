@@ -20,7 +20,7 @@ export const publications: Publication[] = [
     type: 'Публикации в медиа',
     year: '2024',
     href: '#',
-    imageSrc: '/images/publications/publication-1.jpg',
+    imageSrc: './images/publications/publication-1.jpg',
     imageAlt: 'Публикация в медиа',
   },
   {
@@ -29,7 +29,7 @@ export const publications: Publication[] = [
     type: 'Подкасты и видео',
     year: '2025',
     href: '#',
-    imageSrc: '/images/publications/publication-2.jpg',
+    imageSrc: './images/publications/publication-2.jpg',
     imageAlt: 'Подкаст',
   },
   {
@@ -38,7 +38,7 @@ export const publications: Publication[] = [
     type: 'Подкасты и видео',
     year: '2025',
     href: '#',
-    imageSrc: '/images/publications/publication-3.jpg',
+    imageSrc: './images/publications/publication-3.jpg',
     imageAlt: 'Подкаст BBE',
   },
   {
@@ -47,7 +47,7 @@ export const publications: Publication[] = [
     type: 'Публикации в медиа',
     year: '2025',
     href: '#',
-    imageSrc: '/images/publications/publication-4.jpg',
+    imageSrc: './images/publications/publication-4.jpg',
     imageAlt: 'Публикация Всепроникающий дизайн',
   },
   {
@@ -56,7 +56,7 @@ export const publications: Publication[] = [
     type: 'Публикации в медиа',
     year: '2024',
     href: '#',
-    imageSrc: '/images/publications/publication-5.jpg',
+    imageSrc: './images/publications/publication-5.jpg',
     imageAlt: 'Ребрендинг e-com',
   },
 ]

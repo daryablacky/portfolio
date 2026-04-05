@@ -112,7 +112,7 @@ export default function QuoteSection() {
           >
             {/* Внешние точки (50x50) */}
             <img 
-              src="/assets/icons/quote-dots.svg" 
+              src="./assets/icons/quote-dots.svg" 
               alt="" 
               aria-hidden="true"
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }} 
@@ -120,7 +120,7 @@ export default function QuoteSection() {
             {/* Внутренняя стрелка (12x12) */}
             <img 
               ref={arrowRef}
-              src="/assets/icons/quote-arrow.svg" 
+              src="./assets/icons/quote-arrow.svg" 
               alt="" 
               className="quote-arrow-mobile"
               aria-hidden="true"

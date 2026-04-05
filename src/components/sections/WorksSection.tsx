@@ -7,36 +7,36 @@ import ProjectSlider, { AssetType } from '@/components/ui/ProjectSlider'
 // Данные для проектов
 const worksData = {
   work01: [
-    { src: '/assets/images/works/work-01/work-01-01.avif', type: 'image' },
-    { src: '/assets/images/works/work-01/work-01-02.mp4?v=2', type: 'video' },
-    { src: '/assets/images/works/work-01/work-01-03.avif', type: 'image' },
-    { src: '/assets/images/works/work-01/work-01-04.avif', type: 'image' },
-    { src: '/assets/images/works/work-01/work-01-05.mp4', type: 'video' },
-    { src: '/assets/images/works/work-01/work-01-06.avif', type: 'image' },
-    { src: '/assets/images/works/work-01/work-01-07.avif', type: 'image' },
+    { src: './assets/images/works/work-01/work-01-01.avif', type: 'image' },
+    { src: './assets/images/works/work-01/work-01-02.mp4?v=2', type: 'video' },
+    { src: './assets/images/works/work-01/work-01-03.avif', type: 'image' },
+    { src: './assets/images/works/work-01/work-01-04.avif', type: 'image' },
+    { src: './assets/images/works/work-01/work-01-05.mp4', type: 'video' },
+    { src: './assets/images/works/work-01/work-01-06.avif', type: 'image' },
+    { src: './assets/images/works/work-01/work-01-07.avif', type: 'image' },
   ] as AssetType[],
   work02: Array.from({ length: 6 }, (_, i) => ({
-    src: `/assets/images/works/work-02/work-02-0${i + 1}.avif`,
+    src: `./assets/images/works/work-02/work-02-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
   work03: Array.from({ length: 5 }, (_, i) => ({
-    src: `/assets/images/works/work-03/work-03-0${i + 1}.avif`,
+    src: `./assets/images/works/work-03/work-03-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
   work04: Array.from({ length: 7 }, (_, i) => ({
-    src: `/assets/images/works/work-04/work-04-0${i + 1}.avif`,
+    src: `./assets/images/works/work-04/work-04-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
   work05: Array.from({ length: 5 }, (_, i) => ({
-    src: `/assets/images/works/work-05/work-05-0${i + 1}.avif`,
+    src: `./assets/images/works/work-05/work-05-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
   work06: Array.from({ length: 7 }, (_, i) => ({
-    src: `/assets/images/works/work-06/work-06-0${i + 1}.avif`,
+    src: `./assets/images/works/work-06/work-06-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
   work07: Array.from({ length: 6 }, (_, i) => ({
-    src: `/assets/images/works/work-07/work-07-0${i + 1}.avif`,
+    src: `./assets/images/works/work-07/work-07-0${i + 1}.avif`,
     type: 'image',
   })) as AssetType[],
 }
@@ -73,7 +73,7 @@ function MobileWorkCard({
         }}>
           {hasAward && (
             <Image
-              src="/assets/icons/ribbon-s.svg"
+              src="./assets/icons/ribbon-s.svg"
               alt=""
               aria-hidden="true"
               width={7}
@@ -172,7 +172,7 @@ export default function WorksSection() {
               <ProjectSlider assets={worksData.work01} width="48.958vw" height="36.25vw" />
               <div style={textContainerStyles}>
                 <div style={titleStyles}>
-                  <img src="/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
+                  <img src="./assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
                   <span>Ребрендинг Flowwow</span>
                 </div>
                 <div style={descStyles}>Арт-дирекшен. 2024</div>
@@ -196,7 +196,7 @@ export default function WorksSection() {
               <div style={{ width: '24.132vw', flexShrink: 0 }} />
               <div style={textContainerStyles}>
                 <div style={titleStyles}>
-                  <img src="/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
+                  <img src="./assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
                   <span>3D Айдентика Flowwow</span>
                 </div>
                 <div style={descStyles}>Арт-дирекшен. 2025</div>
@@ -321,7 +321,7 @@ export default function WorksSection() {
           >
             <span>Раскрыть ещё 4 проекта</span>
             <Image
-              src="/assets/images/works/works-icon.avif"
+              src="./assets/images/works/works-icon.avif"
               alt=""
               className="works-icon"
               aria-hidden="true"

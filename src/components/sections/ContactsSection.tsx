@@ -74,18 +74,18 @@ export default function ContactsSection() {
       <div className="contacts-desktop" style={{ width: '100%', height: '100dvh', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', position: 'relative' }}>
         {/* ОРНАМЕНТЫ */}
         <div style={{ position: 'absolute', bottom: '-27.778vw', left: 0, width: '100vw', pointerEvents: 'none', zIndex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-          <img src="/assets/images/contacts/circles-contact.svg" alt="" aria-hidden="true" style={{ width: '100vw', height: 'auto' }} />
+          <img src="./assets/images/contacts/circles-contact.svg" alt="" aria-hidden="true" style={{ width: '100vw', height: 'auto' }} />
         </div>
 
         {/* Центральный контент */}
         <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '30.903vw', height: '30.903vw', marginBottom: '3.472vw', zIndex: 2 }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1 }}>
-            <img src="/assets/images/contacts/dots-ellipse-contact.svg?v=445" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+            <img src="./assets/images/contacts/dots-ellipse-contact.svg?v=445" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.778vw', zIndex: 2 }}>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.667vw', width: '100%' }}>
               <div style={{ width: '3.472vw', height: '4.028vw', borderRadius: '1.111vw', overflow: 'hidden', position: 'relative' }}>
-                <img src="/assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
+                <img src="./assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '1.389vw', lineHeight: 1.2, color: '#0b0e15', width: '22.778vw' }}>
                 <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design & Creative Director</p>
@@ -134,17 +134,17 @@ export default function ContactsSection() {
       <div className="contacts-mobile" style={{ width: '100%', height: '705px', flexDirection: 'column', alignItems: 'center', position: 'relative', zIndex: 2 }}>
         {/* Фоновые круги для мобилки */}
         <div style={{ position: 'absolute', top: '-200.9px', left: '50%', transform: 'translateX(-50%)', width: '812px', height: '840px', pointerEvents: 'none', zIndex: 1 }}>
-          <img src="/assets/images/contacts/circles-contact.svg" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+          <img src="./assets/images/contacts/circles-contact.svg" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
         </div>
 
         {/* Центральный блок профиля */}
         <div style={{ position: 'relative', width: 'calc(100vw - 20px)', aspectRatio: '1', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <img src="/assets/images/contacts/dots-ellipse-contact.svg?v=445" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+             <img src="./assets/images/contacts/dots-ellipse-contact.svg?v=445" alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '24px', zIndex: 3 }}>
             <div style={{ width: '50px', height: '58px', borderRadius: '16px', overflow: 'hidden' }}>
-              <img src="/assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="./assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ width: '308px', textAlign: 'center', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '18px', lineHeight: 1.2, color: '#0b0e15' }}>
               <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design & Creative Director</p>

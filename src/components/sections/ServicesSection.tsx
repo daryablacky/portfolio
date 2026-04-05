@@ -12,12 +12,12 @@ const services = [
       </>
     ),
     images: [
-      "/assets/images/services/consulting/consulting-01.avif",
-      "/assets/images/services/consulting/consulting-02.avif",
-      "/assets/images/services/consulting/consulting-03.avif",
-      "/assets/images/services/consulting/consulting-04.avif",
-      "/assets/images/services/consulting/consulting-05.avif",
-      "/assets/images/services/consulting/consulting-06.avif",
+      "./assets/images/services/consulting/consulting-01.avif",
+      "./assets/images/services/consulting/consulting-02.avif",
+      "./assets/images/services/consulting/consulting-03.avif",
+      "./assets/images/services/consulting/consulting-04.avif",
+      "./assets/images/services/consulting/consulting-05.avif",
+      "./assets/images/services/consulting/consulting-06.avif",
     ]
   },
   {
@@ -26,9 +26,9 @@ const services = [
       <>Независимый арт-директор: концепции, визуальные системы и участие в проектах на этапе идеи и реализации.</>
     ),
     images: [
-      "/assets/images/services/art-direction/art-direction-01.avif",
-      "/assets/images/services/art-direction/art-direction-02.avif",
-      "/assets/images/services/art-direction/art-direction-03.avif",
+      "./assets/images/services/art-direction/art-direction-01.avif",
+      "./assets/images/services/art-direction/art-direction-02.avif",
+      "./assets/images/services/art-direction/art-direction-03.avif",
     ]
   },
   {
@@ -37,9 +37,9 @@ const services = [
       <>Приглашённый спикер и эксперт образовательных программ и конференций: дизайн, лидерство, развитие креативных команд. Среди проектов, Bang Bang Education, МИФ курсы, Логомашина.</>
     ),
     images: [
-      "/assets/images/services/lecturing/lecturing-01.avif",
-      "/assets/images/services/lecturing/lecturing-02.avif",
-      "/assets/images/services/lecturing/lecturing-03.avif",
+      "./assets/images/services/lecturing/lecturing-01.avif",
+      "./assets/images/services/lecturing/lecturing-02.avif",
+      "./assets/images/services/lecturing/lecturing-03.avif",
     ]
   }
 ]
