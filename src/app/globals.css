@@ -8,7 +8,7 @@
    -------------------------------------------------------------------------- */
 @font-face {
   font-family: 'Pretendard Variable';
-  src: url('/font/PretendardVariable.woff2') format('woff2-variations');
+  src: url('./font/PretendardVariable.woff2') format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -22,26 +22,26 @@
 @theme {
   /* Цвета */
   --color-black-main: #0b0e15;
-  --color-black-40:   #0b0e1566;
-  --color-black-10:   #0b0e151a;
-  --color-black-0:    #0b0e1500;
+  --color-black-40: #0b0e1566;
+  --color-black-10: #0b0e151a;
+  --color-black-0: #0b0e1500;
   --color-white-main: #ffffff;
-  --color-white-40:   #ffffff66;
-  --color-red-main:   #ee160b;
-  --color-grey-bg:    #f9f9fa;
+  --color-white-40: #ffffff66;
+  --color-red-main: #ee160b;
+  --color-grey-bg: #f9f9fa;
 
   /* Типографика */
   --font-sans: 'Pretendard Variable', system-ui, sans-serif;
 
   /* Спейсинг (числовые переменные из Figma) */
-  --spacing-px-2:    2px;
-  --spacing-px-4:    4px;
-  --spacing-px-8:    8px;
-  --spacing-px-10:   10px;
-  --spacing-px-12:   12px;
-  --spacing-px-16:   16px;
-  --spacing-px-80:   80px;
-  --spacing-px-100:  100px;
+  --spacing-px-2: 2px;
+  --spacing-px-4: 4px;
+  --spacing-px-8: 8px;
+  --spacing-px-10: 10px;
+  --spacing-px-12: 12px;
+  --spacing-px-16: 16px;
+  --spacing-px-80: 80px;
+  --spacing-px-100: 100px;
 
   /* Z-index */
   --z-navbar: 1000;
@@ -63,6 +63,7 @@
   background-color: #D2EBFF;
   color: var(--color-black-main);
 }
+
 ::-moz-selection {
   background-color: #D2EBFF;
   color: var(--color-black-main);
@@ -70,7 +71,8 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip; /* clip вместо hidden, чтобы не ломался position: sticky */
+  overflow-x: clip;
+  /* clip вместо hidden, чтобы не ломался position: sticky */
 }
 
 body {
@@ -79,7 +81,8 @@ body {
   color: var(--color-black-main);
   line-height: 1.2;
   -webkit-font-smoothing: antialiased;
-  overflow-x: clip; /* clip вместо hidden, чтобы не ломался position: sticky */
+  overflow-x: clip;
+  /* clip вместо hidden, чтобы не ломался position: sticky */
 }
 
 /* --------------------------------------------------------------------------
@@ -106,7 +109,8 @@ body {
    5. Scroll-margin для anchor-навигации
    -------------------------------------------------------------------------- */
 section[id] {
-  scroll-margin-top: 80px; /* высота navbar */
+  scroll-margin-top: 80px;
+  /* высота navbar */
 }
 
 /* --------------------------------------------------------------------------
@@ -259,9 +263,11 @@ section[id] {
 
   /* ── Navbar Scroll Nav ───────────────────────────────────────────────── */
   .nav-scroll-container-mobile {
-    height: auto !important;  /* Hug — обнимает текст */
+    height: auto !important;
+    /* Hug — обнимает текст */
     width: 200px !important;
-    position: relative !important;  /* Сбрасываем absolute с inline-стилей */
+    position: relative !important;
+    /* Сбрасываем absolute с inline-стилей */
     top: auto !important;
     overflow: hidden !important;
     mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
@@ -281,19 +287,21 @@ section[id] {
   .compass-needle-mobile {
     width: 12px !important;
     height: 12px !important;
-    position: relative !important;  /* Сбрасываем absolute */
+    position: relative !important;
+    /* Сбрасываем absolute */
     top: auto !important;
   }
 
   .compass-crown-mobile {
     width: 44px !important;
     height: 20px !important;
-    position: relative !important;  /* Сбрасываем absolute */
+    position: relative !important;
+    /* Сбрасываем absolute */
     top: auto !important;
   }
 
   /* Gap 8px между элементами навигации на мобильных */
-  .navbar-center-mobile > * {
+  .navbar-center-mobile>* {
     gap: 8px !important;
   }
 
@@ -379,7 +387,8 @@ section[id] {
   }
 
   .flowwow-image-text-mobile {
-    width: 100% !important;     /* Заполняем всю ширину контента (340px) */
+    width: 100% !important;
+    /* Заполняем всю ширину контента (340px) */
     flex-direction: row !important;
     align-items: flex-start !important;
     gap: 10px !important;
@@ -387,10 +396,12 @@ section[id] {
   }
 
   .flowwow-circle-mobile {
-    flex: 1 !important;         /* Занимает ровно половину доступного места */
+    flex: 1 !important;
+    /* Занимает ровно половину доступного места */
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 24097 / 22778 !important; /* Соответствует десктопному 24.097vw / 22.778vw */
+    aspect-ratio: 24097 / 22778 !important;
+    /* Соответствует десктопному 24.097vw / 22.778vw */
     border-radius: 50% !important;
     width: auto !important;
     overflow: hidden !important;
@@ -442,7 +453,8 @@ section[id] {
     width: 100% !important;
     height: auto !important;
     min-height: 0 !important;
-    aspect-ratio: 48958 / 27431 !important; /* Соответствует десктопному 48.958vw / 27.431vw */
+    aspect-ratio: 48958 / 27431 !important;
+    /* Соответствует десктопному 48.958vw / 27.431vw */
     border-radius: 0 !important;
   }
 
@@ -490,7 +502,7 @@ section[id] {
     width: 100% !important;
   }
 
-  .works-project-inner-mobile > div {
+  .works-project-inner-mobile>div {
     width: 100% !important;
     font-size: 12px !important;
   }
@@ -519,13 +531,15 @@ section[id] {
   }
 
   .project-slider-pagination {
-    bottom: 10px !important; /* Соответствует 0.694vw на десктопе */
+    bottom: 10px !important;
+    /* Соответствует 0.694vw на десктопе */
     width: 60px !important;
     height: 16px !important;
   }
 
   .project-slider-dot {
-    width: 3px !important; /* Стандартная точка Dot 3/4 */
+    width: 3px !important;
+    /* Стандартная точка Dot 3/4 */
     height: 3px !important;
     transform: translate(calc(-50% + var(--mobile-translateX, 0px)), -50%) !important;
     background-color: #ffffff !important;
@@ -533,7 +547,8 @@ section[id] {
   }
 
   .project-slider-dot[data-active="true"] {
-    width: 8px !important; /* Активная Dot 1 */
+    width: 8px !important;
+    /* Активная Dot 1 */
     height: 4px !important;
     border-radius: 40px !important;
   }
@@ -586,7 +601,7 @@ section[id] {
     gap: 10px !important;
   }
 
-  .experience-desc-mobile > div {
+  .experience-desc-mobile>div {
     width: 100% !important;
     flex: none !important;
   }
@@ -744,7 +759,8 @@ section[id] {
     cursor: pointer !important;
     width: fit-content !important;
     margin: 0 auto !important;
-    margin-top: 20px !important; /* +40px от сетки = 60px */
+    margin-top: 20px !important;
+    /* +40px от сетки = 60px */
   }
 
   /* ── Contacts Section ────────────────────────────────────────────────── */
@@ -842,11 +858,13 @@ section[id] {
   flex-direction: column;
   justify-content: space-between;
 }
+
 .burger-line {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: white; /* Цвет регулируется через mix-blend-mode: difference в .burger-btn */
+  background-color: white;
+  /* Цвет регулируется через mix-blend-mode: difference в .burger-btn */
   transition: all 0.3s ease;
   transform-origin: center;
 }
@@ -854,6 +872,7 @@ section[id] {
 .burger-btn.open .burger-line:nth-child(1) {
   transform: translateY(5px) rotate(45deg);
 }
+
 .burger-btn.open .burger-line:nth-child(2) {
   transform: translateY(-5px) rotate(-45deg);
 }
@@ -861,4 +880,3 @@ section[id] {
 .mobile-menu-overlay.open .mobile-menu-drawer {
   transform: translateX(0);
 }
-
