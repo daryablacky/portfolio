@@ -1,0 +1,17 @@
+<svg width="513" height="513" viewBox="0 0 513 513" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="256.008" cy="256.008" r="253.5" stroke="#0B0E15" stroke-opacity="0.1" stroke-dasharray="4 4"/>
+<g id="hero-repit-ellipse_inner">
+<circle cx="256.008" cy="2.00781" r="2" fill="#EE160B"/>
+</g>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(162.302 -93.7054) rotate(30)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(349.713 -93.7054) rotate(60)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(512.016 1.10712e-05) rotate(90)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(605.721 162.302) rotate(120)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(605.721 349.713) rotate(150)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(512.016 512.016) rotate(-180)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(349.713 605.721) rotate(-150)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(162.302 605.721) rotate(-120)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(-2.93365e-06 512.016) rotate(-90)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(-93.7054 349.713) rotate(-60)"/>
+<use xlink:href="#hero-repit-ellipse_inner" transform="translate(-93.7053 162.302) rotate(-30)"/>
+</svg>

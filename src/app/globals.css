@@ -1,0 +1,864 @@
+/* ==========================================================================
+   DBW Portfolio — Global Styles
+   Дизайн-система на основе Design Variables (node 4008:181)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Шрифт: Pretendard Variable (локальный, хранится в /public/fonts/)
+   -------------------------------------------------------------------------- */
+@font-face {
+  font-family: 'Pretendard Variable';
+  src: url('/font/PretendardVariable.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --------------------------------------------------------------------------
+   2. Tailwind CSS v4 — @theme: дизайн-токены из Design Variables
+   -------------------------------------------------------------------------- */
+@import "tailwindcss";
+
+@theme {
+  /* Цвета */
+  --color-black-main: #0b0e15;
+  --color-black-40:   #0b0e1566;
+  --color-black-10:   #0b0e151a;
+  --color-black-0:    #0b0e1500;
+  --color-white-main: #ffffff;
+  --color-white-40:   #ffffff66;
+  --color-red-main:   #ee160b;
+  --color-grey-bg:    #f9f9fa;
+
+  /* Типографика */
+  --font-sans: 'Pretendard Variable', system-ui, sans-serif;
+
+  /* Спейсинг (числовые переменные из Design) */
+  --spacing-px-2:    2px;
+  --spacing-px-4:    4px;
+  --spacing-px-8:    8px;
+  --spacing-px-10:   10px;
+  --spacing-px-12:   12px;
+  --spacing-px-16:   16px;
+  --spacing-px-80:   80px;
+  --spacing-px-100:  100px;
+
+  /* Z-index */
+  --z-navbar: 1000;
+}
+
+/* --------------------------------------------------------------------------
+   3. Base styles
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Кастомный цвет выделения текста (blue-main) */
+::selection {
+  background-color: #D2EBFF;
+  color: var(--color-black-main);
+}
+::-moz-selection {
+  background-color: #D2EBFF;
+  color: var(--color-black-main);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip; /* clip вместо hidden, чтобы не ломался position: sticky */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-grey-bg);
+  color: var(--color-black-main);
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip; /* clip вместо hidden, чтобы не ломался position: sticky */
+}
+
+/* --------------------------------------------------------------------------
+   4. Типографические стили (из Design Text Styles)
+   -------------------------------------------------------------------------- */
+
+/* Hero Special / H1-D — 20px SemiBold */
+.text-hero-special {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* Text / Paragraph / Link — 12px SemiBold */
+.text-body {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+/* --------------------------------------------------------------------------
+   5. Scroll-margin для anchor-навигации
+   -------------------------------------------------------------------------- */
+section[id] {
+  scroll-margin-top: 80px; /* высота navbar */
+}
+
+/* --------------------------------------------------------------------------
+   6. Navbar link hover — линия слева → направо
+   Используется в Navbar.tsx на ссылках navbar-links и navbar-transitions
+   -------------------------------------------------------------------------- */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+/* Линия-индикатор под текстом */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* ==========================================================================
+   7. Mobile Adaptations — @media (max-width: 768px)
+   Base mobile viewport: 360px. Formula: px / 3.6 = vw (for mobile)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+  /* ── Navbar ─────────────────────────────────────────────────────────── */
+  .navbar-desktop-left,
+  .navbar-desktop-right {
+    display: none !important;
+  }
+
+  .navbar-center-mobile {
+    position: fixed !important;
+    top: 10px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 175px !important;
+    height: 65px !important;
+    z-index: 1000 !important;
+    pointer-events: none !important;
+  }
+
+  /* ── Hero Section ────────────────────────────────────────────────────── */
+  .hero-section-mobile {
+    height: 100dvh !important;
+    padding-top: 90px !important;
+    padding-bottom: 40px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .hero-content-mobile {
+    width: calc(100% - 20px) !important;
+    height: 440px !important;
+    position: relative;
+    margin: 0 auto !important;
+  }
+
+  .hero-content-wrapper-mobile {
+    width: 100% !important;
+    height: 340px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .hero-text-inner-mobile {
+    gap: 12px !important;
+  }
+
+  .hero-tex-cta-mobile {
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    gap: 24px !important;
+  }
+
+  .hero-avatar-mobile {
+    width: 50px !important;
+    height: 58px !important;
+    border-radius: 16px !important;
+  }
+
+  .hero-h1-mobile {
+    font-size: 18px !important;
+    width: 308px !important;
+    margin: 0 !important;
+  }
+
+  .hero-desc-mobile {
+    font-size: 12px !important;
+    width: 248px !important;
+    margin: 0 !important;
+  }
+
+  .hero-btn-mobile {
+    font-size: 12px !important;
+    padding: 12px 18px !important;
+    gap: 8px !important;
+    border-radius: 40px !important;
+  }
+
+  .hero-advantages-mobile {
+    position: absolute !important;
+    bottom: -64px !important;
+    top: auto !important;
+    transform: translateX(-50%) !important;
+    height: 24px !important;
+    width: calc(100% - 20px) !important;
+    left: 50% !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .hero-advantages-mobile span {
+    font-size: 18px !important;
+    white-space: nowrap !important;
+  }
+
+  .ribbon-mobile {
+    width: 11px !important;
+    height: 22px !important;
+  }
+
+  .indicator-mobile {
+    --indicator-w: 4px;
+    --indicator-h-on: 8px;
+    --indicator-h-off: 4px;
+  }
+
+  /* ── Navbar Scroll Nav ───────────────────────────────────────────────── */
+  .nav-scroll-container-mobile {
+    height: auto !important;  /* Hug — обнимает текст */
+    width: 200px !important;
+    position: relative !important;  /* Сбрасываем absolute с inline-стилей */
+    top: auto !important;
+    overflow: hidden !important;
+    mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%) !important;
+  }
+
+  .nav-scroll-label-mobile {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+
+  .nav-scroll-carousel-mobile {
+    gap: 20px !important;
+  }
+
+  .compass-needle-mobile {
+    width: 12px !important;
+    height: 12px !important;
+    position: relative !important;  /* Сбрасываем absolute */
+    top: auto !important;
+  }
+
+  .compass-crown-mobile {
+    width: 44px !important;
+    height: 20px !important;
+    position: relative !important;  /* Сбрасываем absolute */
+    top: auto !important;
+  }
+
+  /* Gap 8px между элементами навигации на мобильных */
+  .navbar-center-mobile > * {
+    gap: 8px !important;
+  }
+
+  /* ── Superpowers Section ─────────────────────────────────────────────── */
+  .superpowers-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 60px !important;
+  }
+
+  .superpowers-header-mobile {
+    width: 100% !important;
+  }
+
+  .superpowers-title-mobile {
+    font-size: 24px !important;
+    line-height: normal !important;
+  }
+
+  .superpowers-grid-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 40px !important;
+  }
+
+  .superpowers-card-mobile {
+    width: 100% !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  .superpowers-icon-mobile {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  .superpowers-text-mobile {
+    gap: 4px !important;
+  }
+
+  .superpowers-card-title-mobile {
+    font-size: 14px !important;
+    white-space: normal !important;
+  }
+
+  .superpowers-card-desc-mobile {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* ── Flowwow Section ─────────────────────────────────────────────────── */
+  .flowwow-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 60px !important;
+  }
+
+  .flowwow-header-mobile {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
+  .flowwow-title-mobile {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+
+  .flowwow-content-mobile {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .flowwow-left-mobile {
+    width: 100% !important;
+    flex: none !important;
+    justify-content: center !important;
+  }
+
+  .flowwow-image-text-mobile {
+    width: 100% !important;     /* Заполняем всю ширину контента (340px) */
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    display: flex !important;
+  }
+
+  .flowwow-circle-mobile {
+    flex: 1 !important;         /* Занимает ровно половину доступного места */
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 24097 / 22778 !important; /* Соответствует десктопному 24.097vw / 22.778vw */
+    border-radius: 50% !important;
+    width: auto !important;
+    overflow: hidden !important;
+  }
+
+  .flowwow-circle-content-mobile {
+    transform: none !important;
+  }
+
+  .flowwow-circles-image-mobile {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .flowwow-medal-image-mobile {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, calc(-50% - 20px)) !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .flowwow-circle-text-mobile {
+    top: 72% !important;
+    font-size: 12px !important;
+  }
+
+  .flowwow-description-mobile {
+    flex: 1 !important;
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    color: #0b0e15 !important;
+    width: auto !important;
+  }
+
+  .flowwow-right-mobile {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .flowwow-video-mobile {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 48958 / 27431 !important; /* Соответствует десктопному 48.958vw / 27.431vw */
+    border-radius: 0 !important;
+  }
+
+  .flowwow-video-element-mobile {
+    width: 105% !important;
+    height: 105% !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    object-fit: cover !important;
+  }
+
+
+
+  /* ── Works Section ───────────────────────────────────────────────────── */
+  .works-section-mobile {
+    padding-top: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 40px !important;
+  }
+
+  .works-header-mobile {
+    width: 100% !important;
+  }
+
+  .works-header-mobile h2 {
+    font-size: 24px !important;
+    white-space: normal !important;
+  }
+
+  .works-grid-mobile {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .works-project-mobile {
+    width: 100% !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+  }
+
+  .works-project-inner-mobile {
+    width: 100% !important;
+  }
+
+  .works-project-inner-mobile > div {
+    width: 100% !important;
+    font-size: 12px !important;
+  }
+
+  .works-btn-expand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: #f9f9fa !important;
+    border: none !important;
+    border-radius: 40px !important;
+    padding: 12px 20px !important;
+    font-family: 'Pretendard Variable', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: #0b0e15 !important;
+    cursor: pointer !important;
+    width: fit-content !important;
+    margin: 0 auto !important;
+  }
+
+  .works-icon {
+    height: 14px !important;
+    width: auto !important;
+  }
+
+  .project-slider-pagination {
+    bottom: 10px !important; /* Соответствует 0.694vw на десктопе */
+    width: 60px !important;
+    height: 16px !important;
+  }
+
+  .project-slider-dot {
+    width: 3px !important; /* Стандартная точка Dot 3/4 */
+    height: 3px !important;
+    transform: translate(calc(-50% + var(--mobile-translateX, 0px)), -50%) !important;
+    background-color: #ffffff !important;
+    border-radius: 50% !important;
+  }
+
+  .project-slider-dot[data-active="true"] {
+    width: 8px !important; /* Активная Dot 1 */
+    height: 4px !important;
+    border-radius: 40px !important;
+  }
+
+  /* ── Experience Section ──────────────────────────────────────────────── */
+  .experience-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 40px !important;
+  }
+
+  .experience-header-mobile {
+    width: 100% !important;
+    font-size: 24px !important;
+    white-space: normal !important;
+  }
+
+  .experience-cards-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 60px !important;
+  }
+
+  .experience-card-mobile {
+    flex-direction: column !important;
+    gap: 40px !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    align-items: flex-start !important;
+  }
+
+  .experience-info-mobile {
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  .experience-title-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+    white-space: normal !important;
+    align-items: flex-start !important;
+  }
+
+  .experience-desc-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
+  }
+
+  .experience-desc-mobile > div {
+    width: 100% !important;
+    flex: none !important;
+  }
+
+  .experience-photos-mobile {
+    display: none !important;
+  }
+
+  /* ── Quote Section ───────────────────────────────────────────────────── */
+  .quote-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .quote-container-mobile {
+    gap: 40px !important;
+  }
+
+  .quote-icon-container-mobile {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .quote-arrow-mobile {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .quote-text-mobile {
+    font-size: 18px !important;
+    width: 100% !important;
+  }
+
+  .quote-btn-mobile {
+    font-size: 12px !important;
+    padding: 12px 18px !important;
+    margin-top: 24px !important;
+  }
+
+  /* ── Services Section ────────────────────────────────────────────────── */
+  .services-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 80px !important;
+  }
+
+  .services-header-mobile {
+    width: 100% !important;
+    font-size: 24px !important;
+  }
+
+  .services-list-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    gap: 40px !important;
+  }
+
+  .service-card-mobile {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: none !important;
+    gap: 10px !important;
+  }
+
+  .service-header-mobile {
+    height: auto !important;
+    gap: 4px !important;
+  }
+
+  .service-title-mobile {
+    font-size: 12px !important;
+  }
+
+  .service-desc-mobile {
+    font-size: 12px !important;
+  }
+
+  .service-slider-mobile-height {
+    height: 250px !important;
+  }
+
+  .service-slider-pagination {
+    bottom: 10px !important;
+    width: 60px !important;
+    height: 16px !important;
+  }
+
+  .service-slider-dot {
+    width: 3px !important;
+    height: 3px !important;
+    transform: translate(calc(-50% + var(--mobile-translateX, 0px)), -50%) !important;
+    background-color: #ffffff !important;
+    border-radius: 50% !important;
+  }
+
+  .service-slider-dot[data-active="true"] {
+    width: 8px !important;
+    height: 4px !important;
+    border-radius: 40px !important;
+  }
+
+  .services-slider-mobile {
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+
+  .services-slider-mobile::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* ── Publications Section ────────────────────────────────────────────── */
+  .publications-section-mobile {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    gap: 60px !important;
+  }
+
+  .publications-header-mobile {
+    width: 100% !important;
+  }
+
+  .publications-header-mobile h2 {
+    font-size: 24px !important;
+  }
+
+  .publications-grid-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 40px !important;
+  }
+
+  .publications-btn-expand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: #f9f9fa !important;
+    border: none !important;
+    border-radius: 40px !important;
+    padding: 12px 18px !important;
+    font-family: 'Pretendard Variable', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: #0b0e15 !important;
+    cursor: pointer !important;
+    width: fit-content !important;
+    margin: 0 auto !important;
+    margin-top: 20px !important; /* +40px от сетки = 60px */
+  }
+
+  /* ── Contacts Section ────────────────────────────────────────────────── */
+  /* Стили перенесены внутрь компонента ContactsSection.tsx для более точного управления адаптивностью */
+
+
+  /* ── Mobile Burger Button ────────────────────────────────────────────── */
+  .burger-btn {
+    display: flex !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    z-index: 1100 !important;
+    width: 30px !important;
+    height: 30px !important;
+    background: transparent !important;
+    border: none !important;
+    cursor: pointer !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    mix-blend-mode: difference !important;
+  }
+
+  /* Desktop-only: hide burger on desktop */
+
+  /* Works Section: show mobile grid, hide desktop grid */
+  .works-grid-desktop {
+    display: none !important;
+  }
+
+  .works-grid-mobile {
+    display: flex !important;
+  }
+
+  /* Publications Section: show mobile grid, hide desktop grid */
+  .publications-grid-desktop {
+    display: none !important;
+  }
+
+  .publications-grid-mobile {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .burger-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+}
+
+/* Mobile menu overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.mobile-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 14, 21, 0.3);
+}
+
+.mobile-menu-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  background: white;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Стили для 2-линейного бургера с анимацией */
+.burger-icon {
+  width: 22px;
+  height: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.burger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Цвет регулируется через mix-blend-mode: difference в .burger-btn */
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.burger-btn.open .burger-line:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.burger-btn.open .burger-line:nth-child(2) {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+.mobile-menu-overlay.open .mobile-menu-drawer {
+  transform: translateX(0);
+}
+
