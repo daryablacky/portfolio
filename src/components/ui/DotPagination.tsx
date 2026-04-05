@@ -1,7 +1,7 @@
 'use client'
 
 // UI Component: DotPagination
-// Design: Frame с Dot 1-5 — пагинация в виде точек (для слайдеров в works и services)
+// Figma: Frame с Dot 1-5 — пагинация в виде точек (для слайдеров в works и services)
 
 interface DotPaginationProps {
   total: number

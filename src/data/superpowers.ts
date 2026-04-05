@@ -1,5 +1,5 @@
 // Data: Superpowers
-// Design: superpowers-section — 4 карточки суперсил
+// Figma: superpowers-section — 4 карточки суперсил
 
 export interface Superpower {
   id: string

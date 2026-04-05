@@ -1,5 +1,5 @@
 // Data: Publications / Public Trail
-// Design: publications-section — публикации, подкасты, видео
+// Figma: publications-section — публикации, подкасты, видео
 
 export type PublicationType = 'Публикации в медиа' | 'Подкасты и видео'
 

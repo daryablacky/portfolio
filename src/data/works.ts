@@ -1,5 +1,5 @@
 // Data: Works / Projects
-// Design: works-section — масонри-галерея проектных работ
+// Figma: works-section — масонри-галерея проектных работ
 
 export interface Work {
   id: string

@@ -1,6 +1,6 @@
 'use client'
 
-// Flowwow Section — Design node 4008:277
+// Flowwow Section — Figma node 4008:277
 // Размер в макете: 1440px ширина -> конвертируем в vw (px / 14.4)
 //
 // Структура:
@@ -213,7 +213,7 @@ export default function FlowwowSection() {
                 objectFit: 'cover',
                 pointerEvents: 'none',
               }}
-              src="/portfolio/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio.mp4"
+              src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio.mp4"
             />
             {/* Оверлей 3% поверх видео */}
             <div

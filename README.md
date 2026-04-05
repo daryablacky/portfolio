@@ -1,6 +1,6 @@
 # DBW Portfolio
 
-Одностраничный сайт-визитка.
+Одностраничный сайт-визитка. Дизайн: [Figma](https://www.figma.com/design/aQdffuLpSYPx5OtmDTXFAd/DBW-For-Dev-Yomko?node-id=4008-181).
 
 ## Стек
 
@@ -15,7 +15,7 @@
 src/
 ├── app/                  # Роутинг Next.js (layout, page, globals.css)
 ├── components/
-│   ├── sections/         # 1 секция макета = 1 компонент
+│   ├── sections/         # 1 секция Figma = 1 компонент
 │   └── ui/               # Переиспользуемые UI-компоненты
 ├── data/                 # Контент сайта (TypeScript)
 ├── hooks/                # Кастомные хуки
@@ -26,9 +26,9 @@ public/
 └── videos/               # Локальные видео
 ```
 
-## Секции
+## Секции (порядок из Figma)
 
-| # | Компонент | Design ID |
+| # | Компонент | Figma ID |
 |---|---|---|
 | 0 | `Navbar` | `4026:313` |
 | 1 | `HeroSection` | `4015:73` |

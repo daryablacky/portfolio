@@ -1,5 +1,5 @@
 // UI Component: PowerCard
-// Design instance: Powers Container — карточка «суперсилы»
+// Figma instance: Powers Container — карточка «суперсилы»
 // Состав: иконка/изображение + название + описание
 
 interface PowerCardProps {

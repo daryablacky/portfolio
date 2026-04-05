@@ -1,5 +1,5 @@
 // UI Component: ProjectCard
-// Design instance: Project Item (4020:493) — карточка работы
+// Figma instance: Project Item (4020:493) — карточка работы
 // Состав: изображение + caption (заголовок) + description (тип/год)
 
 interface ProjectCardProps {

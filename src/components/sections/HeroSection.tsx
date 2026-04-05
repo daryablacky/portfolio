@@ -1,6 +1,6 @@
 'use client'
 
-// HeroSection — Design node 4015:73
+// HeroSection — Figma node 4015:73
 // Размер в макете: 1440×700px → 100vw × 100dvh
 // Формула конвертации: px / 14.4 = vw
 //
@@ -53,7 +53,7 @@ export default function HeroSection() {
         }}
       >
         {/* Строка hero-advantages: "10 лет опыта" слева, "15 наград" справа */}
-        {/* Design: точно по центру hero-content по высоте */}
+        {/* Figma: точно по центру hero-content по высоте */}
         <div
           aria-label="Достижения"
           className="hero-advantages-mobile"
@@ -236,7 +236,7 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Button — "Обсудить задачу" */}
-            {/* Design: px=12px → 0.833vw, py=8px → 0.556vw, gap=8px → 0.556vw, radius=40px → 2.778vw */}
+            {/* Figma: px=12px → 0.833vw, py=8px → 0.556vw, gap=8px → 0.556vw, radius=40px → 2.778vw */}
             <a
               className="hero-btn-mobile"
               href="https://t.me/daryablacky"

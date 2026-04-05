@@ -1,5 +1,5 @@
 // UI Component: SectionHeading
-// Design: Section Heading text — заголовок секции (примерно 29px высотой)
+// Figma: Section Heading text — заголовок секции (примерно 29px высотой)
 // Используется во всех основных секциях
 
 interface SectionHeadingProps {

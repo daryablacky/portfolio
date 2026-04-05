@@ -1,5 +1,5 @@
 // Data: Services / How I Work
-// Design: services-section — 3 services-item
+// Figma: services-section — 3 services-item
 
 export interface Service {
   id: string

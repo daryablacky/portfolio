@@ -1,5 +1,5 @@
 // UI Component: Button
-// Design instances: Button-black (hero), Button (contacts)
+// Figma instances: Button-black (hero), Button (contacts)
 
 interface ButtonProps {
   children: React.ReactNode

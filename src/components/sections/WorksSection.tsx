@@ -7,13 +7,13 @@ import ProjectSlider, { AssetType } from '@/components/ui/ProjectSlider'
 // Данные для проектов
 const worksData = {
   work01: [
-    { src: '/portfolio/assets/images/works/work-01/work-01-01.avif', type: 'image' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-02.mp4?v=2', type: 'video' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-03.avif', type: 'image' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-04.avif', type: 'image' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-05.mp4', type: 'video' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-06.avif', type: 'image' },
-    { src: '/portfolio/assets/images/works/work-01/work-01-07.avif', type: 'image' },
+    { src: '/assets/images/works/work-01/work-01-01.avif', type: 'image' },
+    { src: '/assets/images/works/work-01/work-01-02.mp4?v=2', type: 'video' },
+    { src: '/assets/images/works/work-01/work-01-03.avif', type: 'image' },
+    { src: '/assets/images/works/work-01/work-01-04.avif', type: 'image' },
+    { src: '/assets/images/works/work-01/work-01-05.mp4', type: 'video' },
+    { src: '/assets/images/works/work-01/work-01-06.avif', type: 'image' },
+    { src: '/assets/images/works/work-01/work-01-07.avif', type: 'image' },
   ] as AssetType[],
   work02: Array.from({ length: 6 }, (_, i) => ({
     src: `/assets/images/works/work-02/work-02-0${i + 1}.avif`,
@@ -172,7 +172,7 @@ export default function WorksSection() {
               <ProjectSlider assets={worksData.work01} width="48.958vw" height="36.25vw" />
               <div style={textContainerStyles}>
                 <div style={titleStyles}>
-                  <img src="/portfolio/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
+                  <img src="/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
                   <span>Ребрендинг Flowwow</span>
                 </div>
                 <div style={descStyles}>Арт-дирекшен. 2024</div>
@@ -196,7 +196,7 @@ export default function WorksSection() {
               <div style={{ width: '24.132vw', flexShrink: 0 }} />
               <div style={textContainerStyles}>
                 <div style={titleStyles}>
-                  <img src="/portfolio/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
+                  <img src="/assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: '0.486vw', height: '0.972vw' }} />
                   <span>3D Айдентика Flowwow</span>
                 </div>
                 <div style={descStyles}>Арт-дирекшен. 2025</div>

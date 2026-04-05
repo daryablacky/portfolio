@@ -1,7 +1,7 @@
 'use client'
 
-// Indicator — Design node 788:1858
-// Два состояния:
+// Indicator — Figma node 788:1858
+// Два состояния из Figma:
 //   Indicator-off: 4×4px, #91f271, opacity 0.1, border-radius 19px
 //   Indicator-on:  4×8px, #91f271, border 1px solid rgba(145,242,113,0.3), border-radius 19px
 //

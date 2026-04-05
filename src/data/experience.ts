@@ -1,5 +1,5 @@
 // Data: Experience
-// Design: experience-section — 3 записи опыта работы
+// Figma: experience-section — 3 записи опыта работы
 
 export interface ExperienceEntry {
   id: string

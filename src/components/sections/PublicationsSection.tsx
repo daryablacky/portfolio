@@ -107,7 +107,7 @@ export default function PublicationsSection() {
           >
             {/* Awwards ribbon (Нижний слой, выровнен по центру) */}
             <img 
-              src="/portfolio/assets/images/publications/public-awwards-ribbon.avif" 
+              src="/assets/images/publications/public-awwards-ribbon.avif" 
               alt="" 
               aria-hidden="true"
               style={{
@@ -122,7 +122,7 @@ export default function PublicationsSection() {
             />
             {/* Dots bg (Верхний слой) */}
             <img 
-              src="/portfolio/assets/images/publications/public-dots.svg" 
+              src="/assets/images/publications/public-dots.svg" 
               alt="" 
               aria-hidden="true"
               style={{
@@ -159,8 +159,8 @@ export default function PublicationsSection() {
                 Дизайн наград
               </span>
               <div style={{ display: 'flex', gap: '0.278vw' /* 4px */ }}>
-                <img src="/portfolio/assets/images/publications/logo-sreda.svg" alt="" aria-hidden="true" style={{ width: '1.944vw', height: '1.944vw' }} />
-                <img src="/portfolio/assets/images/publications/logo-adcr.svg" alt="" aria-hidden="true" style={{ width: '1.944vw', height: '1.944vw' }} />
+                <img src="/assets/images/publications/logo-sreda.svg" alt="" aria-hidden="true" style={{ width: '1.944vw', height: '1.944vw' }} />
+                <img src="/assets/images/publications/logo-adcr.svg" alt="" aria-hidden="true" style={{ width: '1.944vw', height: '1.944vw' }} />
               </div>
             </div>
           </div>
@@ -185,7 +185,7 @@ export default function PublicationsSection() {
               }}
             >
               <img 
-                src="/portfolio/assets/images/publications/public-02.avif" 
+                src="/assets/images/publications/public-02.avif" 
                 alt="" 
                 aria-hidden="true"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -235,7 +235,7 @@ export default function PublicationsSection() {
                 }}
               >
                 <img 
-                  src="/portfolio/assets/images/publications/public-03.avif" 
+                  src="/assets/images/publications/public-03.avif" 
                   alt="" 
                   aria-hidden="true"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -266,7 +266,7 @@ export default function PublicationsSection() {
                 }}
               >
                 <img 
-                  src="/portfolio/assets/images/publications/public-04.avif" 
+                  src="/assets/images/publications/public-04.avif" 
                   alt="" 
                   aria-hidden="true"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -310,7 +310,7 @@ export default function PublicationsSection() {
               }}
             >
               <img 
-                src="/portfolio/assets/images/publications/public-05.avif" 
+                src="/assets/images/publications/public-05.avif" 
                 alt="" 
                 aria-hidden="true"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -350,7 +350,7 @@ export default function PublicationsSection() {
               }}
             >
               <img 
-                src="/portfolio/assets/images/publications/public-06.avif?v=2" 
+                src="/assets/images/publications/public-06.avif?v=2" 
                 alt="" 
                 aria-hidden="true"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -385,13 +385,13 @@ export default function PublicationsSection() {
         {/* Публикация 1: Круг наград (public-01) */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{ width: '100%', aspectRatio: '1/1', borderRadius: '50%', backgroundColor: '#f9f9fa', overflow: 'hidden', position: 'relative' }}>
-            <img src="/portfolio/assets/images/publications/public-awwards-ribbon.avif" alt="" aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '109%', height: '109%', objectFit: 'contain' }} />
-            <img src="/portfolio/assets/images/publications/public-dots.svg" alt="" aria-hidden="true" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/assets/images/publications/public-awwards-ribbon.avif" alt="" aria-hidden="true" style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: '109%', height: '109%', objectFit: 'contain' }} />
+            <img src="/assets/images/publications/public-dots.svg" alt="" aria-hidden="true" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
             <div style={{ position: 'absolute', bottom: '15%', left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8 }}>
               <span style={{ fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, color: '#0b0e15', lineHeight: 1.2 }}>Дизайн наград</span>
               <div style={{ display: 'flex', gap: 4 }}>
-                <img src="/portfolio/assets/images/publications/logo-sreda.svg" alt="" aria-hidden="true" style={{ width: 28, height: 28 }} />
-                <img src="/portfolio/assets/images/publications/logo-adcr.svg" alt="" aria-hidden="true" style={{ width: 28, height: 28 }} />
+                <img src="/assets/images/publications/logo-sreda.svg" alt="" aria-hidden="true" style={{ width: 28, height: 28 }} />
+                <img src="/assets/images/publications/logo-adcr.svg" alt="" aria-hidden="true" style={{ width: 28, height: 28 }} />
               </div>
             </div>
           </div>
@@ -400,7 +400,7 @@ export default function PublicationsSection() {
         {/* Публикация 2: Статья IncRussia (public-02) */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{ width: '100%', aspectRatio: '16/9', overflow: 'hidden', position: 'relative' }}>
-            <img src="/portfolio/assets/images/publications/public-02.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/assets/images/publications/public-02.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, lineHeight: 1.2, color: '#0b0e15' }}>
             <LinkHoverUnderline href="https://incrussia.ru/share/2-goda-bez-uvolnenij/?ysclid=mbnhg7djao374440339">
@@ -413,7 +413,7 @@ export default function PublicationsSection() {
         {/* Публикация 3: Подкаст BBE (public-04) */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{ width: '50%', aspectRatio: '1/1', borderRadius: '50%', overflow: 'hidden', position: 'relative' }}>
-            <img src="/portfolio/assets/images/publications/public-04.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/assets/images/publications/public-04.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, lineHeight: 1.2, color: '#0b0e15' }}>
             <LinkHoverUnderline href="https://www.youtube.com/watch?v=zmjZCwi9bbw">
@@ -426,7 +426,7 @@ export default function PublicationsSection() {
         {/* Публикация 4: Подкаст Flowwow (public-03) */}
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
           <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: 40, overflow: 'hidden', position: 'relative' }}>
-            <img src="/portfolio/assets/images/publications/public-03.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <img src="/assets/images/publications/public-03.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, lineHeight: 1.2, color: '#0b0e15' }}>
             <LinkHoverUnderline href="https://youtu.be/u-G2USaATHo">
@@ -445,7 +445,7 @@ export default function PublicationsSection() {
           >
             <span>Раскрыть ещё 2 публикации</span>
             <img
-              src="/portfolio/assets/images/publications/publications-icon.avif"
+              src="/assets/images/publications/publications-icon.avif"
               alt=""
               aria-hidden="true"
               style={{ width: 23, height: 14, objectFit: 'contain' }}
@@ -459,7 +459,7 @@ export default function PublicationsSection() {
             {/* Публикация 5: Sostav (public-05) */}
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <div style={{ width: '100%', aspectRatio: '16/9', borderRadius: 60, overflow: 'hidden', position: 'relative' }}>
-                <img src="/portfolio/assets/images/publications/public-05.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/assets/images/publications/public-05.avif" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, lineHeight: 1.2, color: '#0b0e15' }}>
                 <LinkHoverUnderline href="https://www.sostav.ru/blogs/266601/60113?fbclid=PAZXh0bgNhZW0CMTEAAaePV9nHbWJ5vb-UBHom5rtjpbjkauuedOMk7uP5AHevQgNZAJwasOYgiFDzMQ_aem_IsZSiU3iMtvN-4_-vPHNaQ">
@@ -472,7 +472,7 @@ export default function PublicationsSection() {
             {/* Публикация 6: Кейс Ребрендинга (public-06) */}
             <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 8 }}>
               <div style={{ width: '100%', aspectRatio: '4/3', overflow: 'hidden', position: 'relative' }}>
-                <img src="/portfolio/assets/images/publications/public-06.avif?v=2" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/assets/images/publications/public-06.avif?v=2" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 4, fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 12, lineHeight: 1.2, color: '#0b0e15' }}>
                 <LinkHoverUnderline href="https://www.sostav.ru/publication/rebrending-v-e-com-kejs-marketplejsa-flowwow-71836.html">

@@ -1,5 +1,5 @@
 // UI Component: WorkEntry
-// Design: Work Entry Container — строка опыта работы
+// Figma: Work Entry Container — строка опыта работы
 // Состав: номер (слева) / должность + компания + даты / описание (2 колонки текста)
 
 interface WorkEntryProps {

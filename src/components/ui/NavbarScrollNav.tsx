@@ -1,6 +1,6 @@
 'use client'
 
-// NavbarScrollNav — Design node 4026:321 (navbar-scroll-navigation)
+// NavbarScrollNav — Figma node 4026:321 (navbar-scroll-navigation)
 // Размер в макете: 175×60px
 // Состав:
 //   - scroll-text-animation: горизонтальная прокрутка названий секций,

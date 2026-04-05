@@ -1,5 +1,5 @@
 // UI Component: CircleDecor
-// Design: hero-repit-ellipse, Circle Container — орнаментальный круг с dot-маркерами на осях
+// Figma: hero-repit-ellipse, Circle Container — орнаментальный круг с dot-маркерами на осях
 // Используется в hero-section, flowwow-section, publications-section
 
 interface CircleDecorProps {

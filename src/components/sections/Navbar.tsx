@@ -1,6 +1,6 @@
 'use client'
 
-// Navbar — Design node 4026:313
+// Navbar — Figma node 4026:313
 // Цвет ссылок: black-main (#0b0e15) — без mix-blend-mode
 // Hover: тонкая линия снизу, слева → направо (CSS класс .nav-link в globals.css)
 //
@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       {/* ─── ЛЕВЫЙ БЛОК: Timezone Info (вместо бывших ссылок) ──────────── */}
-      {/* Design: ширина блока 347px → 24.097vw */}
+      {/* Figma: ширина блока 347px → 24.097vw */}
       <div
         aria-label="Часовой пояс"
         className="navbar-desktop-left"
@@ -92,7 +92,7 @@ export default function Navbar() {
       </div>
 
       {/* ─── ПРАВЫЙ БЛОК: CV / LinkedIn / Связаться ──────────────────── */}
-      {/* Design: navbar-transitions, right=10px → right=0.694vw          */}
+      {/* Figma: navbar-transitions, right=10px → right=0.694vw          */}
       <div
         className="navbar-desktop-right"
         style={{
@@ -128,7 +128,7 @@ export default function Navbar() {
         >
           LinkedIn
         </a>
-        {/* navbar-contact: Design x=84, w=263px → 18.264vw */}
+        {/* navbar-contact: Figma x=84, w=263px → 18.264vw */}
         {/* «Связаться» внутри: x=203 из 263 → прижата вправо (justify-end) */}
         <div
           style={{
