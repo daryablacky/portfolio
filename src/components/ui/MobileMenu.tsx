@@ -107,7 +107,7 @@ export default function MobileMenu() {
               }}
             >
               <a
-                href="/cv.pdf"
+                href="https://drive.google.com/file/d/1hAI5M7KumNeFMXH4ChrfKJVkGG6aQW0g/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

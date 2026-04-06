@@ -118,7 +118,7 @@ export default function ContactsSection() {
           ))}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', height: '100%' }}>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', color: '#0b0e15' }}>
-              <div><LinkHoverUnderline href="/cv.pdf">CV</LinkHoverUnderline></div>
+              <div><LinkHoverUnderline href="https://drive.google.com/file/d/1hAI5M7KumNeFMXH4ChrfKJVkGG6aQW0g/view?usp=sharing">CV</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="http://linkedin.com/in/darya-buchakova-1aaa01212" target="_blank">LinkedIn</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="https://t.me/baguette_psd" target="_blank">ТГК</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="mailto:daryachrnv@gmail.com">daryachrnv@gmail.com</LinkHoverUnderline></div>
@@ -194,7 +194,7 @@ export default function ContactsSection() {
           </div>
           {/* Правая колонка */}
           <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column', gap: '8px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '12px', color: '#0b0e15' }}>
-            <div><LinkHoverUnderline href="/cv.pdf">CV</LinkHoverUnderline></div>
+            <div><LinkHoverUnderline href="https://drive.google.com/file/d/1hAI5M7KumNeFMXH4ChrfKJVkGG6aQW0g/view?usp=sharing">CV</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="http://linkedin.com/in/darya-buchakova-1aaa01212" target="_blank">LinkedIn</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="https://t.me/baguette_psd" target="_blank">ТГК</LinkHoverUnderline></div>
             <div style={{ wordBreak: 'break-all' }}><LinkHoverUnderline href="mailto:daryachrnv@gmail.com">daryachrnv@gmail.com</LinkHoverUnderline></div>
