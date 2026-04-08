@@ -7,15 +7,45 @@ import Indicator from '@/components/ui/Indicator'
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
 
-  // Блокировать скролл страницы при открытом меню
+  // Блокировать скролл страницы при открытом меню.
+  // Не используем overflow:hidden на body — это вызывает layout-сдвиг
+  // (белые полосы сверху/снизу). Вместо этого фиксируем страницу через
+  // position:fixed + top:-scrollY, что freeze-ит её без визуальных артефактов.
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'
+      const scrollY = window.scrollY
+      document.documentElement.style.setProperty('--scroll-y', `${scrollY}px`)
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.left = '0'
+      document.body.style.right = '0'
+      document.body.style.width = '100%'
     } else {
-      document.body.style.overflow = ''
+      const scrollY = document.body.style.top
+        ? parseInt(document.body.style.top || '0') * -1
+        : 0
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.width = ''
+      if (scrollY) {
+        window.scrollTo(0, scrollY)
+      }
     }
     return () => {
-      document.body.style.overflow = ''
+      // Cleanup при размонтировании
+      const scrollY = document.body.style.top
+        ? parseInt(document.body.style.top || '0') * -1
+        : 0
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.left = ''
+      document.body.style.right = ''
+      document.body.style.width = ''
+      if (scrollY) {
+        window.scrollTo(0, scrollY)
+      }
     }
   }, [isOpen])
 

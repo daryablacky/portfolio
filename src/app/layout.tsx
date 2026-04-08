@@ -8,18 +8,27 @@ export const metadata: Metadata = {
     icon: './favicon/avatar-photo-32.png',
     apple: './favicon/avatar-photo-192.png',
   },
+  metadataBase: new URL('https://daryabuchakova.com'),
   openGraph: {
     title: 'Дарья Бучакова — Design & Creative Director (ex Flowwow)',
     description: 'Строю масштабируемые дизайн-системы и сильные команды, которые усиливают бренды и бизнес.',
+    url: 'https://daryabuchakova.com',
+    siteName: 'Дарья Бучакова',
     type: 'website',
     images: [
       {
-        url: './opengraph/opengraph-1200x630.avif',
+        url: '/opengraph/opengraph-1200x630.jpg',
         width: 1200,
         height: 630,
         alt: 'Дарья Бучакова — Design & Creative Director',
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Дарья Бучакова — Design & Creative Director (ex Flowwow)',
+    description: 'Строю масштабируемые дизайн-системы и сильные команды, которые усиливают бренды и бизнес.',
+    images: ['/opengraph/opengraph-1200x630.jpg'],
   },
 }
 

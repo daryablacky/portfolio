@@ -133,7 +133,7 @@ const NavbarScrollNav = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '0.556vw',        // 8px / 14.4 — между всеми тремя элементами
+        gap: 'calc(0.556 * var(--1vw))',  // 8px / 14.4 — между всеми тремя элементами
         justifyContent: 'center',
       }}
     >
@@ -143,7 +143,7 @@ const NavbarScrollNav = () => {
         className="nav-scroll-container-mobile"
         style={{
           position: 'relative',  // больше не absolute
-          width: '18vw',           // Шире 175px, чтобы соседи по бокам помещались
+          width: 'calc(18 * var(--1vw))',  // Шире 175px, чтобы соседи по бокам помещались
           height: 'auto',          // Hug — обнимает текст
           display: 'flex',
           alignItems: 'center',
@@ -160,7 +160,7 @@ const NavbarScrollNav = () => {
           style={{
             display: 'flex',
             alignItems: 'center',
-            gap: '1.389vw',        // Отступ между названиями 20px (1.389vw)
+            gap: 'calc(1.389 * var(--1vw))',  // Отступ между названиями 20px (1.389vw)
             transition: 'transform 0.5s cubic-bezier(0.25, 1, 0.5, 1)',
             transform: `translateX(${translateX}px)`,
             willChange: 'transform',
@@ -182,7 +182,7 @@ const NavbarScrollNav = () => {
                   cursor: 'pointer',
                   fontFamily: '"Pretendard Variable", sans-serif',
                   fontWeight: 600,
-                  fontSize: '0.833vw',   // 12px / 14.4
+                  fontSize: 'calc(0.833 * var(--1vw))',  // 12px / 14.4
                   lineHeight: '1',
                   color: isActive ? '#0b0e15' : 'rgba(11,14,21,0.4)',
                   transition: 'color 0.5s ease',
@@ -202,8 +202,8 @@ const NavbarScrollNav = () => {
         className="compass-needle-mobile"
         style={{
           position: 'relative',  // больше не absolute
-          width: '0.833vw',      // 12px / 14.4
-          height: '0.833vw',
+          width: 'calc(0.833 * var(--1vw))',   // 12px / 14.4
+          height: 'calc(0.833 * var(--1vw))',
           flexShrink: 0,
         }}
       >
@@ -221,8 +221,8 @@ const NavbarScrollNav = () => {
         className="compass-crown-mobile"
         style={{
           position: 'relative',  // больше не absolute
-          width: '3.056vw',      // 44px / 14.4
-          height: '1.389vw',     // 20px / 14.4
+          width: 'calc(3.056 * var(--1vw))',   // 44px / 14.4
+          height: 'calc(1.389 * var(--1vw))',    // 20px / 14.4
           flexShrink: 0,
         }}
       >

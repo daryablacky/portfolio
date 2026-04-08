@@ -35,10 +35,6 @@ export default function ContactsSection() {
         width: '100%',
         backgroundColor: '#d2ebff',
         position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'flex-end',
         overflow: 'hidden',
         boxSizing: 'border-box',
       }}
@@ -71,35 +67,47 @@ export default function ContactsSection() {
       {/* ──────────────────────────────────────────────────────────────────
           DESKTOP VERSION (1440px logic)
           ────────────────────────────────────────────────────────────────── */}
-      <div className="contacts-desktop" style={{ width: '100%', height: '100dvh', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', position: 'relative' }}>
-        {/* ОРНАМЕНТЫ */}
-        <div style={{ position: 'absolute', bottom: '-27.778vw', left: 0, width: '100vw', pointerEvents: 'none', zIndex: 1, display: 'flex', justifyContent: 'flex-start' }}>
-          <img src="./assets/images/contacts/circles-contact.svg" alt="" aria-hidden="true" style={{ width: '100vw', height: 'auto' }} />
+      <div
+        className="contacts-desktop"
+        style={{
+          width: '100%',
+          maxWidth: 'calc(100 * var(--1vw))',
+          margin: '0 auto',
+          height: '100dvh',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'flex-end',
+          position: 'relative',
+        }}
+      >
+        {/* ОРНАМЕНТЫ — на всю ширину, абсолютно */}
+        <div style={{ position: 'absolute', bottom: 'calc(-27.778 * var(--1vw))', left: 0, width: '100%', pointerEvents: 'none', zIndex: 1, display: 'flex', justifyContent: 'flex-start' }}>
+          <img src="./assets/images/contacts/circles-contact.svg" alt="" aria-hidden="true" style={{ width: '100%', height: 'auto' }} />
         </div>
 
         {/* Центральный контент */}
-        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '30.903vw', height: '30.903vw', marginBottom: '3.472vw', zIndex: 2 }}>
+        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: 'calc(30.903 * var(--1vw))', height: 'calc(30.903 * var(--1vw))', zIndex: 2 }}>
           <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 1 }}>
             <img src="./assets/images/contacts/dots-ellipse-contact.svg?v=445" alt="" aria-hidden="true" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
-          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2.778vw', zIndex: 2 }}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.667vw', width: '100%' }}>
-              <div style={{ width: '3.472vw', height: '4.028vw', borderRadius: '1.111vw', overflow: 'hidden', position: 'relative' }}>
+          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'calc(2.778 * var(--1vw))', zIndex: 2 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 'calc(1.667 * var(--1vw))', width: '100%' }}>
+              <div style={{ width: 'calc(3.472 * var(--1vw))', height: 'calc(4.028 * var(--1vw))', borderRadius: 'calc(1.111 * var(--1vw))', overflow: 'hidden', position: 'relative' }}>
                 <img src="./assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '1.389vw', lineHeight: 1.2, color: '#0b0e15', width: '22.778vw' }}>
-                <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design & Creative Director</p>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(1.389 * var(--1vw))', lineHeight: 1.2, color: '#0b0e15', width: 'calc(22.778 * var(--1vw))' }}>
+                <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design &amp; Creative Director</p>
                 <p style={{ margin: 0 }}>(ex дизайн-директор Flowwow), независимый арт-директор, практикующий ментор.</p>
               </div>
             </div>
-            <a href="https://t.me/daryablacky" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.556vw', backgroundColor: '#0b0e15', color: '#ffffff', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', padding: '0.556vw 0.833vw', borderRadius: '2.778vw', textDecoration: 'none' }}>
+            <a href="https://t.me/daryablacky" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 'calc(0.556 * var(--1vw))', backgroundColor: '#0b0e15', color: '#ffffff', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(0.833 * var(--1vw))', padding: 'calc(0.556 * var(--1vw)) calc(0.833 * var(--1vw))', borderRadius: 'calc(2.778 * var(--1vw))', textDecoration: 'none' }}>
               <Indicator /><span>Обсудить задачу</span>
             </a>
           </div>
         </div>
 
         {/* Футер-сетка (6 колонок) */}
-        <div style={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '1.389vw', padding: '0 0.694vw', marginBottom: '0.694vw', zIndex: 2 }}>
+        <div style={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 'calc(1.389 * var(--1vw))', padding: '0 calc(0.694 * var(--1vw))', marginBottom: 'calc(0.694 * var(--1vw))', zIndex: 2 }}>
           {[
             { title: 'Суперсилы', href: '#superpowers', items: ['Системное видение', 'Структурирование хаос', 'Масштаб без потери смысла', 'Стратегическая устойчивость'] },
             { title: 'Работы', href: '#works', items: ['Ребрендинг Flowwow', 'Брендинг MEZHO', '3D Айдентика Flowwow', 'Визуальная айдентика Skuratov', 'Визуальная айдентика Flowwow Market', 'Коллекция POS материалов Flowwow'] },
@@ -108,22 +116,22 @@ export default function ContactsSection() {
             { title: 'Публичный след', href: '#publications', items: ['↗ Как получить нулевую текучку...', '↗ Маркировка. Даша Бучакова', '↗ BBE х Эйч: профессия...', '↗ Всепроникающий дизайн: как...', '↗ Ребрендинг в e-com: кейс...'] },
           ].map((col, idx) => (
             <div key={idx} style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              <div style={{ fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', color: '#0b0e15' }}>
+              <div style={{ fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(0.833 * var(--1vw))', color: '#0b0e15' }}>
                 <LinkHoverUnderline href={col.href}>{col.title}</LinkHoverUnderline>
               </div>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', color: 'rgba(11, 14, 21, 0.4)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(0.833 * var(--1vw))', color: 'rgba(11, 14, 21, 0.4)' }}>
                 {col.items.map((item, i) => <span key={i} style={{ whiteSpace: 'nowrap' }}>{item}</span>)}
               </div>
             </div>
           ))}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', height: '100%' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', color: '#0b0e15' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(0.833 * var(--1vw))', color: '#0b0e15' }}>
               <div><LinkHoverUnderline href="https://drive.google.com/file/d/1hAI5M7KumNeFMXH4ChrfKJVkGG6aQW0g/view?usp=sharing">CV</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="http://linkedin.com/in/darya-buchakova-1aaa01212" target="_blank">LinkedIn</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="https://t.me/baguette_psd" target="_blank">ТГК</LinkHoverUnderline></div>
               <div><LinkHoverUnderline href="mailto:daryachrnv@gmail.com">daryachrnv@gmail.com</LinkHoverUnderline></div>
             </div>
-            <div style={{ marginTop: 'auto', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '0.833vw', color: 'rgba(11, 14, 21, 0.4)' }}>©2026 Daria Buchakova</div>
+            <div style={{ marginTop: 'auto', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: 'calc(0.833 * var(--1vw))', color: 'rgba(11, 14, 21, 0.4)' }}>©2026 Daria Buchakova</div>
           </div>
         </div>
       </div>
@@ -147,10 +155,10 @@ export default function ContactsSection() {
               <img src="./assets/images/contacts/avatar-photo.webp" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div style={{ width: '308px', textAlign: 'center', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '18px', lineHeight: 1.2, color: '#0b0e15' }}>
-              <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design & Creative Director</p>
+              <p style={{ margin: 0 }}>Дарья Бучакова.<br />Design &amp; Creative Director</p>
               <p style={{ margin: 0, fontSize: '18px' }}>(ex дизайн-директор Flowwow), независимый арт-директор, практикующий ментор.</p>
             </div>
-            {/* Кнопка — Копия из HeroSection (mobile logic) */}
+            {/* Кнопка */}
             <a
               className="hero-btn-mobile"
               href="https://t.me/daryablacky"
@@ -185,7 +193,7 @@ export default function ContactsSection() {
         {/* Две колонки ссылок (по макету) */}
         <div style={{ width: '100%', display: 'flex', padding: '0 10px', marginTop: '40px', gap: '20px', zIndex: 3 }}>
           {/* Левая колонка */}
-          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '12px', color: '#0b0e15' }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '8px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '14px', color: '#0b0e15' }}>
             <div><LinkHoverUnderline href="#superpowers">Суперсилы</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="#works">Работы</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="#experience">Опыт</LinkHoverUnderline></div>
@@ -193,7 +201,7 @@ export default function ContactsSection() {
             <div><LinkHoverUnderline href="#publications">Публичный след</LinkHoverUnderline></div>
           </div>
           {/* Правая колонка */}
-          <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column', gap: '8px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '12px', color: '#0b0e15' }}>
+          <div style={{ flex: 1.2, display: 'flex', flexDirection: 'column', gap: '8px', fontFamily: '"Pretendard Variable", sans-serif', fontWeight: 600, fontSize: '14px', color: '#0b0e15' }}>
             <div><LinkHoverUnderline href="https://drive.google.com/file/d/1hAI5M7KumNeFMXH4ChrfKJVkGG6aQW0g/view?usp=sharing">CV</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="http://linkedin.com/in/darya-buchakova-1aaa01212" target="_blank">LinkedIn</LinkHoverUnderline></div>
             <div><LinkHoverUnderline href="https://t.me/baguette_psd" target="_blank">ТГК</LinkHoverUnderline></div>

@@ -65,143 +65,153 @@ export default function SuperpowersSection() {
     <section
       id="superpowers"
       aria-label="Суперсилы"
-      className="superpowers-section-mobile"
       style={{
-        width: '100vw',
+        width: '100%',
         backgroundColor: '#ffffff',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '5.556vw',
-        paddingTop: '6.944vw',
-        paddingBottom: '6.944vw',
-        paddingLeft: '0.694vw',
-        paddingRight: '0.694vw',
-        boxSizing: 'border-box',
       }}
     >
+      {/* Внутренний контейнер: maxWidth замораживается на 2560px */}
       <div
-        className="superpowers-header-mobile"
+        className="superpowers-section-mobile"
         style={{
-          width: '48.889vw',
+          width: '100%',
+          maxWidth: 'calc(100 * var(--1vw))',
+          margin: '0 auto',
+          backgroundColor: '#ffffff',
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
-          flexShrink: 0,
+          gap: 'calc(5.556 * var(--1vw))',
+          paddingTop: 'calc(6.944 * var(--1vw))',
+          paddingBottom: 'calc(6.944 * var(--1vw))',
+          paddingLeft: 'calc(0.694 * var(--1vw))',
+          paddingRight: 'calc(0.694 * var(--1vw))',
+          boxSizing: 'border-box',
         }}
       >
-        <h2
-          className="superpowers-title-mobile"
+        <div
+          className="superpowers-header-mobile"
           style={{
-            ...textStyle,
-            fontSize: '1.667vw',
-            color: '#0b0e15',
-            textAlign: 'left',
-            margin: 0,
-            whiteSpace: 'nowrap',
+            width: 'calc(48.889 * var(--1vw))',
+            display: 'flex',
+            alignItems: 'center',
+            flexShrink: 0,
           }}
         >
-          Суперсилы
-        </h2>
-      </div>
-
-      {/* Superpowers Container */}
-      <div
-        className="superpowers-grid-mobile"
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          rowGap: '1.389vw',
-          columnGap: '0.694vw',
-          alignItems: 'flex-start',
-          justifyContent: 'center',
-          width: '48.889vw',
-          flexShrink: 0,
-        }}
-      >
-        {superpowersData.map(({ id, number, title, description, imageSrc }) => (
-          <div
-            key={id}
-            className="superpowers-card-mobile"
+          <h2
+            className="superpowers-title-mobile"
             style={{
-              display: 'flex',
-              gap: '0.833vw',
-              alignItems: 'center',
-              width: '24.097vw',
-              flexShrink: 0,
-              overflow: 'hidden',
+              ...textStyle,
+              fontSize: 'calc(1.667 * var(--1vw))',
+              color: '#0b0e15',
+              textAlign: 'left',
+              margin: 0,
+              whiteSpace: 'nowrap',
             }}
           >
-            {/* Icon: 80×80px → 5.556vw, circle bg=#f9f9fa */}
-            <div
-              className="superpowers-icon-mobile"
-              style={{
-                width: '5.556vw',      // 80px / 14.4
-                height: '5.556vw',
-                borderRadius: '69.444vw', // 1000px / 14.4 → effectively full circle
-                backgroundColor: '#f9f9fa',
-                flexShrink: 0,
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-              aria-hidden="true"
-            >
-              <Image
-                src={imageSrc}
-                alt=""
-                aria-hidden="true"
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
+            Суперсилы
+          </h2>
+        </div>
 
-            {/* Text Container: flex-1, gap=4px → 0.278vw */}
+        {/* Superpowers Container */}
+        <div
+          className="superpowers-grid-mobile"
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            rowGap: 'calc(1.389 * var(--1vw))',
+            columnGap: 'calc(0.694 * var(--1vw))',
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            width: 'calc(48.889 * var(--1vw))',
+            flexShrink: 0,
+          }}
+        >
+          {superpowersData.map(({ id, number, title, description, imageSrc }) => (
             <div
-              className="superpowers-text-mobile"
+              key={id}
+              className="superpowers-card-mobile"
               style={{
                 display: 'flex',
-                flexDirection: 'column',
-                gap: '0.278vw',        // 4px / 14.4
-                flex: '1 0 0',
-                minWidth: 0,
+                gap: 'calc(0.833 * var(--1vw))',
+                alignItems: 'center',
+                width: 'calc(24.097 * var(--1vw))',
+                flexShrink: 0,
+                overflow: 'hidden',
               }}
             >
-              {/* Title: «N. Название», 12px → 0.833vw, black-main */}
+              {/* Icon: 80×80px → 5.556vw, circle bg=#f9f9fa */}
               <div
+                className="superpowers-icon-mobile"
                 style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'flex-start',
+                  width: 'calc(5.556 * var(--1vw))',      // 80px / 14.4
+                  height: 'calc(5.556 * var(--1vw))',
+                  borderRadius: 'calc(69.444 * var(--1vw))', // 1000px / 14.4 → effectively full circle
+                  backgroundColor: '#f9f9fa',
                   flexShrink: 0,
+                  position: 'relative',
+                  overflow: 'hidden',
                 }}
+                aria-hidden="true"
               >
-                <span
-                  className="superpowers-card-title-mobile"
-                  style={{
-                    ...textStyle,
-                    fontSize: '0.833vw',   // 12px / 14.4
-                    color: '#0b0e15',
-                    whiteSpace: 'nowrap',
-                  }}
-                >
-                  {number}. {title}
-                </span>
+                <Image
+                  src={imageSrc}
+                  alt=""
+                  aria-hidden="true"
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </div>
 
-              {/* Description: 12px → 0.833vw, black-40 */}
-              <p
-                className="superpowers-card-desc-mobile"
+              {/* Text Container: flex-1, gap=4px → 0.278vw */}
+              <div
+                className="superpowers-text-mobile"
                 style={{
-                  ...textStyle,
-                  fontSize: '0.833vw',   // 12px / 14.4
-                  color: 'rgba(11,14,21,0.4)',
-                  margin: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 'calc(0.278 * var(--1vw))',        // 4px / 14.4
+                  flex: '1 0 0',
+                  minWidth: 0,
                 }}
               >
-                {description}
-              </p>
+                {/* Title: «N. Название», 12px → 0.833vw, black-main */}
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-start',
+                    flexShrink: 0,
+                  }}
+                >
+                  <span
+                    className="superpowers-card-title-mobile"
+                    style={{
+                      ...textStyle,
+                      fontSize: 'calc(0.833 * var(--1vw))',   // 12px / 14.4
+                      color: '#0b0e15',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {number}. {title}
+                  </span>
+                </div>
+
+                {/* Description: 12px → 0.833vw, black-40 */}
+                <p
+                  className="superpowers-card-desc-mobile"
+                  style={{
+                    ...textStyle,
+                    fontSize: 'calc(0.833 * var(--1vw))',   // 12px / 14.4
+                    color: 'rgba(11,14,21,0.4)',
+                    margin: 0,
+                  }}
+                >
+                  {description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

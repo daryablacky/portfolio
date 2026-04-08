@@ -50,6 +50,17 @@
 /* --------------------------------------------------------------------------
    3. Base styles
    -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   Максимальная ширина контента — 2560px (Desktop-2560).
+   --1vw: при экране ≤ 2560px равна 1vw (резиновая вёрстка без изменений).
+         при экране > 2560px «замораживается» на 25.6px (= 1vw при 2560px).
+   Используется в компонентах: calc(X * var(--1vw)) вместо Xvw.
+   ========================================================================== */
+:root {
+  --1vw: min(1vw, 25.6px);
+}
+
 *,
 *::before,
 *::after {
@@ -144,6 +155,11 @@ section[id] {
   transform: scaleX(1);
 }
 
+/* Перенос строки только для мобильной версии */
+.flowwow-desc-break-mobile {
+  display: none;
+}
+
 /* ==========================================================================
    7. Mobile Adaptations — @media (max-width: 768px)
    Base mobile viewport: 360px. Formula: px / 3.6 = vw (for mobile)
@@ -170,11 +186,11 @@ section[id] {
 
   /* ── Hero Section ────────────────────────────────────────────────────── */
   .hero-section-mobile {
-    height: 100dvh !important;
+    height: 600px !important;
     padding-top: 90px !important;
     padding-bottom: 40px !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
     justify-content: flex-start !important;
     align-items: center !important;
     box-sizing: border-box !important;
@@ -182,7 +198,7 @@ section[id] {
   }
 
   .hero-content-mobile {
-    width: calc(100% - 20px) !important;
+    width: 100% !important;
     height: 440px !important;
     position: relative;
     margin: 0 auto !important;
@@ -190,7 +206,8 @@ section[id] {
 
   .hero-content-wrapper-mobile {
     width: 100% !important;
-    height: 340px !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
   }
@@ -219,13 +236,13 @@ section[id] {
   }
 
   .hero-desc-mobile {
-    font-size: 12px !important;
-    width: 248px !important;
+    font-size: 14px !important;
+    width: 280px !important;
     margin: 0 !important;
   }
 
   .hero-btn-mobile {
-    font-size: 12px !important;
+    font-size: 14px !important;
     padding: 12px 18px !important;
     gap: 8px !important;
     border-radius: 40px !important;
@@ -233,16 +250,20 @@ section[id] {
 
   .hero-advantages-mobile {
     position: absolute !important;
-    bottom: -64px !important;
+    bottom: -4px !important;
     top: auto !important;
     transform: translateX(-50%) !important;
     height: 24px !important;
-    width: calc(100% - 20px) !important;
+    width: 100% !important;
     left: 50% !important;
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;
     align-items: center !important;
+  }
+  
+  .hero-repit-ellipse-mobile {
+    object-fit: fill !important;
   }
 
   .hero-advantages-mobile span {
@@ -251,8 +272,8 @@ section[id] {
   }
 
   .ribbon-mobile {
-    width: 11px !important;
-    height: 22px !important;
+    width: 12px !important;
+    height: 24px !important;
   }
 
   .indicator-mobile {
@@ -350,7 +371,7 @@ section[id] {
   }
 
   .superpowers-card-desc-mobile {
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.2 !important;
   }
 
@@ -432,16 +453,20 @@ section[id] {
   }
 
   .flowwow-circle-text-mobile {
-    top: 72% !important;
-    font-size: 12px !important;
+    top: calc(72% + 8px) !important;
+    font-size: 14px !important;
   }
 
   .flowwow-description-mobile {
     flex: 1 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     line-height: 1.2 !important;
     color: #0b0e15 !important;
     width: auto !important;
+  }
+
+  .flowwow-desc-break-mobile {
+    display: inline !important;
   }
 
   .flowwow-right-mobile {
@@ -504,7 +529,7 @@ section[id] {
 
   .works-project-inner-mobile>div {
     width: 100% !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .works-btn-expand {
@@ -518,7 +543,7 @@ section[id] {
     padding: 12px 20px !important;
     font-family: 'Pretendard Variable', sans-serif !important;
     font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     color: #0b0e15 !important;
     cursor: pointer !important;
     width: fit-content !important;
@@ -559,7 +584,7 @@ section[id] {
     padding-bottom: 80px !important;
     padding-left: 10px !important;
     padding-right: 10px !important;
-    gap: 40px !important;
+    gap: 60px !important;
   }
 
   .experience-header-mobile {
@@ -578,7 +603,7 @@ section[id] {
     flex-direction: column !important;
     gap: 40px !important;
     width: 100% !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     align-items: flex-start !important;
   }
 
@@ -588,11 +613,24 @@ section[id] {
   }
 
   .experience-title-mobile {
-    flex-direction: column !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
     width: 100% !important;
     gap: 10px !important;
     white-space: normal !important;
     align-items: flex-start !important;
+  }
+
+  .experience-num-desktop {
+    display: none !important;
+  }
+
+  .experience-num-mobile {
+    display: block !important;
+  }
+
+  .experience-title-left-mobile {
+    gap: 20px !important;
   }
 
   .experience-desc-mobile {
@@ -607,6 +645,10 @@ section[id] {
   }
 
   .experience-photos-mobile {
+    display: none !important;
+  }
+
+  .mobile-hidden-br {
     display: none !important;
   }
 
@@ -638,7 +680,7 @@ section[id] {
   }
 
   .quote-btn-mobile {
-    font-size: 12px !important;
+    font-size: 14px !important;
     padding: 12px 18px !important;
     margin-top: 24px !important;
   }
@@ -678,11 +720,11 @@ section[id] {
   }
 
   .service-title-mobile {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .service-desc-mobile {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
 
   .service-slider-mobile-height {
@@ -754,7 +796,7 @@ section[id] {
     padding: 12px 18px !important;
     font-family: 'Pretendard Variable', sans-serif !important;
     font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 14px !important;
     color: #0b0e15 !important;
     cursor: pointer !important;
     width: fit-content !important;

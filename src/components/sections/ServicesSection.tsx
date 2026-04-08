@@ -48,105 +48,116 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="services-section-mobile"
+      aria-label="Услуги"
       style={{
         width: '100%',
         backgroundColor: '#ffffff',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        paddingTop: '6.944vw',
-        paddingBottom: '6.944vw',
-        paddingLeft: '0.694vw',
-        paddingRight: '0.694vw',
-        gap: '5.556vw',
-        position: 'relative',
-        overflow: 'hidden',
       }}
     >
-      {/* Заголовок (704px по центру, текст внутри прижат к левому краю, x=368px) */}
-      <h2
-        className="services-header-mobile"
-        style={{
-          width: '48.889vw',
-          textAlign: 'left',
-          fontFamily: '"Pretendard Variable", sans-serif',
-          fontWeight: 600,
-          fontSize: '1.667vw',
-          lineHeight: 1.2,
-          color: '#0b0e15',
-          margin: 0,
-        }}
-      >
-        Как со мной работают
-      </h2>
-
-      {/* Контейнер карточек услуг (1063px, прижат к линии 367px) */}
+      {/* Внутренний контейнер: maxWidth замораживается на 2560px */}
       <div
+        className="services-section-mobile"
         style={{
-          width: '100%',     // Занимает всю ширину родителя (с учетом паддингов 10px)
+          width: '100%',
+          maxWidth: 'calc(100 * var(--1vw))',
+          margin: '0 auto',
+          backgroundColor: '#ffffff',
           display: 'flex',
-          justifyContent: 'flex-start',
+          flexDirection: 'column',
+          alignItems: 'center',
+          paddingTop: 'calc(6.944 * var(--1vw))',
+          paddingBottom: 'calc(6.944 * var(--1vw))',
+          paddingLeft: 'calc(0.694 * var(--1vw))',
+          paddingRight: 'calc(0.694 * var(--1vw))',
+          gap: 'calc(5.556 * var(--1vw))',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
-        <div
-          className="services-list-mobile"
+        {/* Заголовок (704px по центру, текст внутри прижат к левому краю, x=368px) */}
+        <h2
+          className="services-header-mobile"
           style={{
-            marginLeft: '24.792vw',
-            width: '73.819vw',
-            display: 'flex',
-            gap: '0.694vw',
-            alignItems: 'flex-start',
+            width: 'calc(48.889 * var(--1vw))',
+            textAlign: 'left',
+            fontFamily: '"Pretendard Variable", sans-serif',
+            fontWeight: 600,
+            fontSize: 'calc(1.667 * var(--1vw))',
+            lineHeight: 1.2,
+            color: '#0b0e15',
+            margin: 0,
           }}
         >
-          {services.map((srv, idx) => (
-            <div
-              key={idx}
-              className="service-card-mobile"
-              style={{
-                flex: '1 1 0', // Каждая колонка делит пространство поровну (~24.14vw)
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.694vw', // 10px / 14.4 (отступ от текста до картинки)
-              }}
-            >
-              {/* Шапка услуги */}
+          Как со мной работают
+        </h2>
+
+        {/* Контейнер карточек услуг (1063px, прижат к линии 367px) */}
+        <div
+          style={{
+            width: 'calc(98.611 * var(--1vw))',
+            display: 'flex',
+            justifyContent: 'flex-start',
+          }}
+        >
+          <div
+            className="services-list-mobile"
+            style={{
+              marginLeft: 'calc(24.792 * var(--1vw))',
+              width: 'calc(73.819 * var(--1vw))',
+              display: 'flex',
+              gap: 'calc(0.694 * var(--1vw))',
+              alignItems: 'flex-start',
+            }}
+          >
+            {services.map((srv, idx) => (
               <div
-                className="service-header-mobile"
+                key={idx}
+                className="service-card-mobile"
                 style={{
+                  flex: '1 1 0', // Каждая колонка делит пространство поровну (~24.14vw)
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: '0.278vw', // 4px / 14.4
-                  height: '5.139vw', // 74px / 14.4
-                  fontFamily: '"Pretendard Variable", sans-serif',
-                  fontWeight: 600,
-                  fontSize: '0.833vw', // 12px / 14.4
-                  lineHeight: 1.2,
+                  gap: 'calc(0.694 * var(--1vw))', // 10px / 14.4 (отступ от текста до картинки)
                 }}
               >
-                <div 
-                  className="service-title-mobile"
-                  style={{ color: '#0b0e15' }}
+                {/* Шапка услуги */}
+                <div
+                  className="service-header-mobile"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: 'calc(0.278 * var(--1vw))', // 4px / 14.4
+                    height: 'calc(5.139 * var(--1vw))', // 74px / 14.4
+                    fontFamily: '"Pretendard Variable", sans-serif',
+                    fontWeight: 600,
+                    fontSize: 'calc(0.833 * var(--1vw))', // 12px / 14.4
+                    lineHeight: 1.2,
+                  }}
                 >
-                  {srv.title}
+                  <div 
+                    className="service-title-mobile"
+                    style={{ color: '#0b0e15' }}
+                  >
+                    {srv.title}
+                  </div>
+                  <div 
+                    className="service-desc-mobile"
+                    style={{ color: 'rgba(11, 14, 21, 0.4)' }}
+                  >
+                    {srv.description}
+                  </div>
                 </div>
-                <div 
-                  className="service-desc-mobile"
-                  style={{ color: 'rgba(11, 14, 21, 0.4)' }}
-                >
-                  {srv.description}
-                </div>
-              </div>
 
-              {/* Картинка (Слайдер) */}
-              <ServiceSlider
-                images={srv.images}
-                width="100%"
-                height="17.361vw"
-                className="service-slider-mobile-height"
-              />
-            </div>
-          ))}
+                {/* Картинка (Слайдер) */}
+                <ServiceSlider
+                  images={srv.images}
+                  width="100%"
+                  height="calc(17.361 * var(--1vw))"
+                  className="service-slider-mobile-height"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

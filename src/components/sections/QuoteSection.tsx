@@ -88,88 +88,101 @@ export default function QuoteSection() {
           justifyContent: 'center',
         }}
       >
+        {/* Внутренний контейнер: maxWidth замораживается на 2560px */}
         <div
-          className="quote-container-mobile"
           style={{
+            width: '100%',
+            maxWidth: 'calc(100 * var(--1vw))',
+            margin: '0 auto',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '2.778vw', // 40px / 14.4
+            justifyContent: 'center',
           }}
         >
-          {/* Композитная иконка кавычек (dots + arrow) из макета */}
           <div
-            className="quote-icon-container-mobile"
+            className="quote-container-mobile"
             style={{
-              width: '3.472vw', // 50px / 14.4
-              height: '3.472vw', // 50px / 14.4
-              flexShrink: 0,
-              position: 'relative',
               display: 'flex',
+              flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center',
+              gap: 'calc(2.778 * var(--1vw))', // 40px / 14.4
             }}
           >
-            {/* Внешние точки (50x50) */}
-            <img 
-              src="./assets/icons/quote-dots.svg" 
-              alt="" 
-              aria-hidden="true"
-              style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }} 
-            />
-            {/* Внутренняя стрелка (12x12) */}
-            <img 
-              ref={arrowRef}
-              src="./assets/icons/quote-arrow.svg" 
-              alt="" 
-              className="quote-arrow-mobile"
-              aria-hidden="true"
-              style={{ position: 'relative', width: '0.833vw', height: '0.833vw', display: 'block', zIndex: 1 }} 
-            />
-          </div>
+            {/* Композитная иконка кавычек (dots + arrow) из макета */}
+            <div
+              className="quote-icon-container-mobile"
+              style={{
+                width: 'calc(3.472 * var(--1vw))', // 50px / 14.4
+                height: 'calc(3.472 * var(--1vw))', // 50px / 14.4
+                flexShrink: 0,
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {/* Внешние точки (50x50) */}
+              <img 
+                src="./assets/icons/quote-dots.svg" 
+                alt="" 
+                aria-hidden="true"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', display: 'block' }} 
+              />
+              {/* Внутренняя стрелка (12x12) */}
+              <img 
+                ref={arrowRef}
+                src="./assets/icons/quote-arrow.svg" 
+                alt="" 
+                className="quote-arrow-mobile"
+                aria-hidden="true"
+                style={{ position: 'relative', width: 'calc(0.833 * var(--1vw))', height: 'calc(0.833 * var(--1vw))', display: 'block', zIndex: 1 }} 
+              />
+            </div>
 
-          {/* Текстовый блок */}
-          <div
-            className="quote-text-mobile"
-            style={{
-              width: '34.722vw',
-              textAlign: 'center',
-              fontFamily: '"Pretendard Variable", sans-serif',
-              fontWeight: 600,
-              fontSize: '2.083vw',
-              lineHeight: 1.2,
-            }}
-          >
-            {textLines.map((line, lineIdx) => (
-              <span key={lineIdx} style={{ display: 'block', whiteSpace: 'nowrap' }}>
-                {line.map((word, wordIdx) => {
-                  const idx = absoluteWordIndex++
-                  
-                  // Считаем рамки "прогресса" именно для этого слова
-                  const start = idx / TOTAL_WORDS
-                  const end = (idx + 1) / TOTAL_WORDS
-                  
-                  // Локальный прогресс слова от 0 до 1 (0 -> серый, 1 -> черный)
-                  const localProgress = Math.min(Math.max((progress - start) / (end - start), 0), 1)
-                  
-                  // Альфа-канал цвета плавно меняется от 0.1 (black-10) до 1.0 (black-main)
-                  const alpha = 0.1 + 0.9 * localProgress
+            {/* Текстовый блок */}
+            <div
+              className="quote-text-mobile"
+              style={{
+                width: 'calc(34.722 * var(--1vw))',
+                textAlign: 'center',
+                fontFamily: '"Pretendard Variable", sans-serif',
+                fontWeight: 600,
+                fontSize: 'calc(2.083 * var(--1vw))',
+                lineHeight: 1.2,
+              }}
+            >
+              {textLines.map((line, lineIdx) => (
+                <span key={lineIdx} style={{ display: 'block', whiteSpace: 'nowrap' }}>
+                  {line.map((word, wordIdx) => {
+                    const idx = absoluteWordIndex++
+                    
+                    // Считаем рамки "прогресса" именно для этого слова
+                    const start = idx / TOTAL_WORDS
+                    const end = (idx + 1) / TOTAL_WORDS
+                    
+                    // Локальный прогресс слова от 0 до 1 (0 -> серый, 1 -> черный)
+                    const localProgress = Math.min(Math.max((progress - start) / (end - start), 0), 1)
+                    
+                    // Альфа-канал цвета плавно меняется от 0.1 (black-10) до 1.0 (black-main)
+                    const alpha = 0.1 + 0.9 * localProgress
 
-                  return (
-                    <span
-                      key={wordIdx}
-                      style={{
-                        color: `rgba(11, 14, 21, ${alpha})`,
-                      }}
-                    >
-                      {word}
-                      {/* Ставим пробел после слова, если оно не последнее в строке */}
-                      {wordIdx < line.length - 1 ? ' ' : ''}
-                    </span>
-                  )
-                })}
-              </span>
-            ))}
+                    return (
+                      <span
+                        key={wordIdx}
+                        style={{
+                          color: `rgba(11, 14, 21, ${alpha})`,
+                        }}
+                      >
+                        {word}
+                        {/* Ставим пробел после слова, если оно не последнее в строке */}
+                        {wordIdx < line.length - 1 ? ' ' : ''}
+                      </span>
+                    )
+                  })}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
