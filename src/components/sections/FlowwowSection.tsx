@@ -211,6 +211,7 @@ export default function FlowwowSection() {
                 muted
                 loop
                 playsInline
+                webkit-playsinline="true"
                 className="flowwow-video-element-mobile"
                 style={{
                   position: 'absolute',
@@ -222,8 +223,13 @@ export default function FlowwowSection() {
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
-                src="./assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4"
-              />
+                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4"
+              >
+                <source 
+                  src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4" 
+                  type="video/mp4" 
+                />
+              </video>
               {/* Оверлей 3% поверх видео */}
               <div
                 style={{
