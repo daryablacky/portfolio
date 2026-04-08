@@ -3,11 +3,40 @@
 // Flowwow Section — Figma node 4008:277
 // Размер в макете: 1440px ширина -> конвертируем в vw (px / 14.4)
 
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
+const VIDEO_SRC = '/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4'
+
 export default function FlowwowSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const videoRef  = useRef<HTMLVideoElement>(null)
+
+  // Lazy-load: добавляем src только когда секция входит во вьюпорт
+  useEffect(() => {
+    const section = sectionRef.current
+    const video   = videoRef.current
+    if (!section || !video) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !video.src) {
+          video.src    = VIDEO_SRC
+          video.muted  = true
+          video.load()
+          video.play().catch(() => { /* autoplay policy — нет звука, отложим */ })
+          observer.disconnect() // один раз достаточно
+        }
+      },
+      { threshold: 0.1 }
+    )
+
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
   return (
     <section
+      ref={sectionRef}
       id="flowwow"
       aria-label="Опыт во Flowwow"
       style={{
@@ -193,7 +222,9 @@ export default function FlowwowSection() {
                 backgroundColor: '#f9f9fa',
               }}
             >
+                {/* src добавляется динамически через IntersectionObserver */}
               <video
+                ref={videoRef}
                 autoPlay
                 muted
                 loop
@@ -203,13 +234,12 @@ export default function FlowwowSection() {
                   position: 'absolute',
                   top: '50%',
                   left: '50%',
-                  width: 'calc(49.306 * var(--1vw))',    // 710px / 14.4
-                  height: 'calc(27.778 * var(--1vw))',   // 400px / 14.4
+                  width: 'calc(49.306 * var(--1vw))',
+                  height: 'calc(27.778 * var(--1vw))',
                   transform: 'translate(-50%, -50%)',
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
-                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4"
               />
               {/* Оверлей 3% поверх видео */}
               <div
