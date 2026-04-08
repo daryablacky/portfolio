@@ -211,8 +211,6 @@ export default function FlowwowSection() {
                 muted
                 loop
                 playsInline
-                preload="none"
-                poster="./assets/images/flowwow/circlescontentwrapper.avif"
                 className="flowwow-video-element-mobile"
                 style={{
                   position: 'absolute',

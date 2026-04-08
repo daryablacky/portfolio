@@ -197,11 +197,11 @@ export default function HeroSection() {
                 >
                   <Image
                     src="./assets/images/hero/avatar-photo.webp"
-                    alt="Дарья Бучакова"
+                    alt=""
+                    aria-hidden="true"
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'top center' }}
                     priority
-                    sizes="calc(3.472 * var(--1vw))"
                   />
                 </div>
 
