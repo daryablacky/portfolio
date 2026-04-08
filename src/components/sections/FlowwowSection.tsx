@@ -3,40 +3,11 @@
 // Flowwow Section — Figma node 4008:277
 // Размер в макете: 1440px ширина -> конвертируем в vw (px / 14.4)
 
-import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
-const VIDEO_SRC = '/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4'
-
 export default function FlowwowSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const videoRef  = useRef<HTMLVideoElement>(null)
-
-  // Lazy-load: добавляем src только когда секция входит во вьюпорт
-  useEffect(() => {
-    const section = sectionRef.current
-    const video   = videoRef.current
-    if (!section || !video) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !video.src) {
-          video.src    = VIDEO_SRC
-          video.muted  = true
-          video.load()
-          video.play().catch(() => { /* autoplay policy — нет звука, отложим */ })
-          observer.disconnect() // один раз достаточно
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    observer.observe(section)
-    return () => observer.disconnect()
-  }, [])
   return (
     <section
-      ref={sectionRef}
       id="flowwow"
       aria-label="Опыт во Flowwow"
       style={{
@@ -133,12 +104,10 @@ export default function FlowwowSection() {
                   flexShrink: 0,
                 }}
               >
-                {/* Разделенные ассеты: медаль и круги (патерн) */}
                 <div
                   className="flowwow-circle-content-mobile"
                   style={{ position: 'absolute', inset: 0 }}
                 >
-                  {/* Medal (нижний слой) */}
                   <Image
                     src="./assets/images/flowwow/medalcontentwrapper.avif"
                     alt=""
@@ -148,7 +117,6 @@ export default function FlowwowSection() {
                     style={{ objectFit: 'cover', zIndex: 0 }}
                     sizes="(max-width: 1440px) 25vw, 347px"
                   />
-                  {/* Circles Pattern (верхний слой над медалью) */}
                   <Image
                     src="./assets/images/flowwow/circlescontentwrapper.avif"
                     alt=""
@@ -210,7 +178,6 @@ export default function FlowwowSection() {
               flexShrink: 0,
             }}
           >
-            {/* Slide Container */}
             <div
               className="flowwow-video-mobile"
               style={{
@@ -222,9 +189,7 @@ export default function FlowwowSection() {
                 backgroundColor: '#f9f9fa',
               }}
             >
-                {/* src добавляется динамически через IntersectionObserver */}
               <video
-                ref={videoRef}
                 autoPlay
                 muted
                 loop
@@ -240,6 +205,7 @@ export default function FlowwowSection() {
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
+                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4"
               />
               {/* Оверлей 3% поверх видео */}
               <div
