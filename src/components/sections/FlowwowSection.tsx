@@ -3,38 +3,9 @@
 // Flowwow Section — Figma node 4008:277
 // Размер в макете: 1440px ширина -> конвертируем в vw (px / 14.4)
 
-import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function FlowwowSection() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  // Принудительный запуск видео для мобильных устройств
-  useEffect(() => {
-    const video = videoRef.current
-    if (video) {
-      // Браузеры (особенно iOS) требуют явного подтверждения беззвучности через JS
-      video.muted = true
-      video.defaultMuted = true
-      
-      const attemptPlay = () => {
-        video.play().catch(error => {
-          console.warn("Autoplay was prevented, retrying on user interaction...", error)
-          // Если автоплей заблокирован, пробуем запуститься по любому клику на странице
-          const startVideo = () => {
-            video.play()
-            document.removeEventListener('click', startVideo)
-            document.removeEventListener('touchstart', startVideo)
-          }
-          document.addEventListener('click', startVideo)
-          document.addEventListener('touchstart', startVideo)
-        })
-      }
-
-      attemptPlay()
-    }
-  }, [])
-
   return (
     <section
       id="flowwow"
@@ -222,18 +193,11 @@ export default function FlowwowSection() {
                 backgroundColor: '#f9f9fa',
               }}
             >
-              {/* 
-                Видео автоматическое, без кнопок, зацикленное.
-                playsInline важно для корректной работы автовоспроизведения на iOS.
-                pointerEvents: none предотвращает паузу по клику.
-              */}
               <video
-                ref={videoRef}
                 autoPlay
                 muted
                 loop
                 playsInline
-                webkit-playsinline="true"
                 className="flowwow-video-element-mobile"
                 style={{
                   position: 'absolute',
@@ -245,13 +209,8 @@ export default function FlowwowSection() {
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
-                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4"
-              >
-                <source 
-                  src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4" 
-                  type="video/mp4" 
-                />
-              </video>
+                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4"
+              />
               {/* Оверлей 3% поверх видео */}
               <div
                 style={{
