@@ -211,6 +211,8 @@ export default function FlowwowSection() {
                 muted
                 loop
                 playsInline
+                preload="none"
+                poster="./assets/images/flowwow/circlescontentwrapper.avif"
                 className="flowwow-video-element-mobile"
                 style={{
                   position: 'absolute',
@@ -222,7 +224,7 @@ export default function FlowwowSection() {
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
-                src="./assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio.mp4"
+                src="./assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_compressed.mp4"
               />
               {/* Оверлей 3% поверх видео */}
               <div
