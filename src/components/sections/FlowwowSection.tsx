@@ -2,18 +2,39 @@
 
 // Flowwow Section — Figma node 4008:277
 // Размер в макете: 1440px ширина -> конвертируем в vw (px / 14.4)
-//
-// Структура:
-// - py: 100px (6.944vw), px: 10px (0.694vw)
-// - gap: 80px (5.556vw)
-// Header: "Контекст масштаба", width 704px (48.889vw)
-// Main Content: flex row, gap 10px (0.694vw)
-//   Left Section: flex 1 (705px), контент прижат вправо (w=347px)
-//   Right Section: w 705px (48.958vw), Видео автоплей
 
+import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
 export default function FlowwowSection() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  // Принудительный запуск видео для мобильных устройств
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      // Браузеры (особенно iOS) требуют явного подтверждения беззвучности через JS
+      video.muted = true
+      video.defaultMuted = true
+      
+      const attemptPlay = () => {
+        video.play().catch(error => {
+          console.warn("Autoplay was prevented, retrying on user interaction...", error)
+          // Если автоплей заблокирован, пробуем запуститься по любому клику на странице
+          const startVideo = () => {
+            video.play()
+            document.removeEventListener('click', startVideo)
+            document.removeEventListener('touchstart', startVideo)
+          }
+          document.addEventListener('click', startVideo)
+          document.addEventListener('touchstart', startVideo)
+        })
+      }
+
+      attemptPlay()
+    }
+  }, [])
+
   return (
     <section
       id="flowwow"
@@ -207,6 +228,7 @@ export default function FlowwowSection() {
                 pointerEvents: none предотвращает паузу по клику.
               */}
               <video
+                ref={videoRef}
                 autoPlay
                 muted
                 loop
