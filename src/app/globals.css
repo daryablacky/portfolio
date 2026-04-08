@@ -699,6 +699,12 @@ section[id] {
     font-size: 24px !important;
   }
 
+  .services-wrapper-mobile {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+
   .services-list-mobile {
     flex-direction: column !important;
     width: 100% !important;

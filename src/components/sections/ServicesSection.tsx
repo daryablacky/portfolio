@@ -52,6 +52,7 @@ export default function ServicesSection() {
       style={{
         width: '100%',
         backgroundColor: '#ffffff',
+        overflowX: 'clip',
       }}
     >
       {/* Внутренний контейнер: maxWidth замораживается на 2560px */}
@@ -72,6 +73,7 @@ export default function ServicesSection() {
           gap: 'calc(5.556 * var(--1vw))',
           position: 'relative',
           overflow: 'hidden',
+          boxSizing: 'border-box',
         }}
       >
         {/* Заголовок (704px по центру, текст внутри прижат к левому краю, x=368px) */}
@@ -93,6 +95,7 @@ export default function ServicesSection() {
 
         {/* Контейнер карточек услуг (1063px, прижат к линии 367px) */}
         <div
+          className="services-wrapper-mobile"
           style={{
             width: 'calc(98.611 * var(--1vw))',
             display: 'flex',
