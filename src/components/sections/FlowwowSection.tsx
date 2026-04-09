@@ -205,7 +205,7 @@ export default function FlowwowSection() {
                   objectFit: 'cover',
                   pointerEvents: 'none',
                 }}
-                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES_no_audio_crf24.mp4"
+                src="/assets/video/flowwow-section/_reel_demo2026____FIN_LQ_TG_LN_EDIT_TITLES.webm"
               />
               {/* Оверлей 3% поверх видео */}
               <div
