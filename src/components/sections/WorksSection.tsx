@@ -184,7 +184,7 @@ export default function WorksSection() {
                     <img src="./assets/icons/ribbon-s.svg" alt="" aria-hidden="true" style={{ width: 'calc(0.486 * var(--1vw))', height: 'calc(0.972 * var(--1vw))' }} />
                     <span>Ребрендинг Flowwow</span>
                   </div>
-                  <div style={descStyles}>Арт-дирекшен w/ Shuka Brand Bureau, 2024</div>
+                  <div style={descStyles}>Арт-дирекшен w/ Shuka Brand Bureau. 2024</div>
                 </div>
               </div>
 
@@ -269,7 +269,7 @@ export default function WorksSection() {
           <MobileWorkCard
             assets={worksData.work01}
             title="Ребрендинг Flowwow"
-            desc="Арт-дирекшен. 2024"
+            desc="Арт-дирекшен w/ Shuka Brand Bureau. 2024"
             height="74vw"
             hasAward
           />
