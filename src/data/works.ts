@@ -15,7 +15,7 @@ export const works: Work[] = [
   {
     id: '1',
     title: 'Ребрендинг Flowwow',
-    description: 'Арт-дирекшен. Flowwow, 2024',
+    description: 'Арт-дирекшен w/ Shuka Brand Bureau, Flowwow, 2024',
     type: 'Брендинг',
     year: '2024',
     imageSrc: './images/works/flowwow-rebrand.jpg',
