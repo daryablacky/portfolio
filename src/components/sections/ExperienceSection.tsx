@@ -6,7 +6,7 @@ const experiences = [
     num: "01.",
     position: "Art Director Premium, Private",
     company: "Т-Банк",
-    dates: "(2026 — настоящее время)",
+    dates: "(2026 — now)",
     descLeft: (
       <>
         Определяю визуальную стратегию сегмента HNWI/UHNWI{' '}
