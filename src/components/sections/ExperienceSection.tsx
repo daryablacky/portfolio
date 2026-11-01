@@ -4,6 +4,23 @@ import Image from 'next/image'
 const experiences = [
   {
     num: "01.",
+    position: "Art Director Premium, Private",
+    company: "Т-Банк",
+    dates: "(2026 — настоящее время)",
+    descLeft: (
+      <>
+        Определяю визуальную стратегию сегмента HNWI/UHNWI{' '}
+        <br className="mobile-hidden-br" />и&nbsp;отвечаю за&nbsp;её&nbsp;воплощение в&nbsp;продукте (мобильный банк, инвестиции, бизнес, веб), маркетинговых коммуникациях и&nbsp;офлайн-взаимодействиях с&nbsp;аудиторией — везде, где консистентность коммуникаций напрямую формирует доверие премиального клиента к&nbsp;бренду.
+      </>
+    ),
+    descRight: (
+      <>
+        Выступаю связующим звеном между стратегией банка, стратегией сегмента и&nbsp;продуктовыми решениями, переводя бизнес-цели в&nbsp;единый визуальный язык.
+      </>
+    )
+  },
+  {
+    num: "02.",
     position: "Design Director",
     company: "Flowwow",
     dates: "(2021 — 2026)",
@@ -28,7 +45,7 @@ const experiences = [
     )
   },
   {
-    num: "02.",
+    num: "03.",
     position: "Art Direction / Consulting",
     company: "Independent",
     dates: "(2016 — now)",
@@ -48,7 +65,7 @@ const experiences = [
     )
   },
   {
-    num: "03.",
+    num: "04.",
     position: "Brand Designer",
     company: "Skuratov Coffee",
     dates: "(2019 — 2021)",
@@ -225,11 +242,25 @@ export default function ExperienceSection() {
 
           {/* Фото (абсолютно позиционированые поверх сетки) */}
           <div className="experience-photos-mobile" style={{ position: 'absolute', left: 0, top: 0, right: 0, bottom: 0, pointerEvents: 'none' }}>
-          {/* exp-image-01 (Chat bubble/Flower) - 177x115, x=0, y=52 */}
+          {/* exp-image-tbank (Т-Банк) - 115.5x115.5, x=182.5, y=52, rounded-22.5 */}
+          <div style={{
+            position: 'absolute',
+            left: 'calc(12.674 * var(--1vw))', // 182.5 / 14.4
+            top: 'calc(3.611 * var(--1vw))',   // 52 / 14.4
+            width: 'calc(8.021 * var(--1vw))', // 115.5 / 14.4
+            height: 'calc(8.021 * var(--1vw))',
+            borderRadius: 'calc(1.563 * var(--1vw))', // 22.5px
+            overflow: 'hidden',
+            zIndex: 5,
+          }}>
+            <Image src="./assets/images/experience/exp-image-tbank.webp" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
+          </div>
+
+          {/* exp-image-01 (Chat bubble/Flower) - 177x115, x=0, y=248 */}
           <div style={{
             position: 'absolute',
             left: '0',
-            top: 'calc(3.611 * var(--1vw))',
+            top: 'calc(17.222 * var(--1vw))', // +196px за строку Т-Банка
             width: 'calc(12.292 * var(--1vw))',
             height: 'calc(7.986 * var(--1vw))',
             overflow: 'hidden',
@@ -238,11 +269,11 @@ export default function ExperienceSection() {
             <Image src="./assets/images/experience/exp-image-01.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
           </div>
 
-          {/* exp-image-02 - 115x115, x=1305, y=0, rounded-30 */}
+          {/* exp-image-02 - 115x115, x=1305, y=210, rounded-30 */}
           <div style={{
             position: 'absolute',
             left: 'calc(90.625 * var(--1vw))', // 1305 / 14.4
-            top: '0',
+            top: 'calc(14.583 * var(--1vw))', // 210 / 14.4
             width: 'calc(7.986 * var(--1vw))',
             height: 'calc(7.986 * var(--1vw))',
             borderRadius: 'calc(2.083 * var(--1vw))', // 30px
@@ -252,11 +283,11 @@ export default function ExperienceSection() {
             <Image src="./assets/images/experience/exp-image-02.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
           </div>
 
-          {/* exp-image-03 - 150x98, x=1073, y=262, rounded-1000 */}
+          {/* exp-image-03 - 150x98, x=1073, y=472, rounded-1000 */}
           <div style={{
             position: 'absolute',
             left: 'calc(74.514 * var(--1vw))', // 1073 / 14.4
-            top: 'calc(18.194 * var(--1vw))',  // 262 / 14.4
+            top: 'calc(32.778 * var(--1vw))',  // 472 / 14.4
             width: 'calc(10.417 * var(--1vw))',
             height: 'calc(6.806 * var(--1vw))',
             borderRadius: '99vw', // 1000px -> круглая капсула
@@ -266,11 +297,11 @@ export default function ExperienceSection() {
             <Image src="./assets/images/experience/exp-image-03.avif" alt="" aria-hidden="true" fill style={{ objectFit: 'cover' }} />
           </div>
 
-          {/* exp-image-04 - 150x98, x=148, y=471.72, rounded-30 */}
+          {/* exp-image-04 - 150x98, x=148, y=667.72, rounded-30 */}
           <div style={{
             position: 'absolute',
             left: 'calc(10.278 * var(--1vw))', // 148 / 14.4
-            top: 'calc(32.758 * var(--1vw))',  // 471.72 / 14.4
+            top: 'calc(46.369 * var(--1vw))',  // 667.72 / 14.4
             width: 'calc(10.417 * var(--1vw))',
             height: 'calc(6.806 * var(--1vw))',
             borderRadius: 'calc(2.083 * var(--1vw))', // 30px
